@@ -147,7 +147,7 @@ Cstr(CStr(Fields!YourRef_PurchaseHeader.Value)) + Chr(177) +
 Cstr(CStr(Fields!SalesPurchPersonName.Value)) + Chr(177) + 
 Cstr(CStr(Fields!CompanyInformationPhoneNo.Value)) + Chr(177) + 
 Cstr(CStr(Fields!BuyfrVendNo_PurchaseHeader.Value)) + Chr(177) + 
-Cstr(CStr(Fields!VendTaxIdentificationType.Value)) + Chr(177) + 
+Cstr(CStr(Fields!Purchaser_Code.Value)) + Chr(177) + 
 Cstr(Fields!CopyTxt.Value) + Chr(177) + 
 Cstr(Fields!PhoneNoCaption.Value) + Chr(177) + 
 Cstr(Fields!TermsCaption.Value) + Chr(177) + 
@@ -923,7 +923,7 @@ Cstr(fields!VendorInvoiceNo.Value)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Code.BlankZero(Fields!AmountExclInvDisc.Value)</Value>
+                                  <Value>=Code.BlankZero(Fields!AmountExclInvDisc.Value) &amp; Chr(10) &amp; Fields!Planned_Receipt_Date.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -2207,7 +2207,7 @@ First(Fields!LineAmtTaxAmtInvDiscountAmtFormat.Value)</Value>
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Constant" />
+                          <Value>=Code.GetData(34,1)</Value>
                           <Style>
                             <FontFamily>Segoe UI</FontFamily>
                             <FontSize>8pt</FontSize>
@@ -3206,6 +3206,12 @@ End Function
         <Field Name="No_PurchaseHeader">
           <DataField>No_PurchaseHeader</DataField>
         </Field>
+        <Field Name="Purchaser_Code">
+          <DataField>Purchaser_Code</DataField>
+        </Field>
+        <Field Name="Shipment_Method_Code">
+          <DataField>Shipment_Method_Code</DataField>
+        </Field>
         <Field Name="CompanyInfoPicture">
           <DataField>CompanyInfoPicture</DataField>
         </Field>
@@ -3523,6 +3529,9 @@ End Function
         </Field>
         <Field Name="Req_Date_Caption">
           <DataField>Req_Date_Caption</DataField>
+        </Field>
+        <Field Name="Planned_Receipt_Date">
+          <DataField>Planned_Receipt_Date</DataField>
         </Field>
       </Fields>
       <Query>

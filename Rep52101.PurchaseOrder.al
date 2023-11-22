@@ -14,6 +14,10 @@ report 52101 "HMP Purchase Order"
             column(No_PurchaseHeader; "No.")
             {
             }
+            column(Purchaser_Code; "Purchaser Code")
+            { }
+            column(Shipment_Method_Code; "Shipment Method Code")
+            { }
             dataitem(CopyLoop; "Integer")
             {
                 DataItemTableView = SORTING(Number);
@@ -303,6 +307,8 @@ report 52101 "HMP Purchase Order"
                         column(Purchase_Order_Caption; Purchase_Order_CaptionLbl)
                         { }
                         column(Req_Date_Caption; Req_Date_CaptionLbl)
+                        { }
+                        column(Planned_Receipt_Date; "Planned Receipt Date")
                         { }
                         trigger OnAfterGetRecord()
                         begin
