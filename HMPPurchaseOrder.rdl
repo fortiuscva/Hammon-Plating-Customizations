@@ -2722,7 +2722,7 @@ First(Fields!LineAmtTaxAmtInvDiscountAmtFormat.Value)</Value>
                   <Height>11pt</Height>
                   <Width>1.15748in</Width>
                   <Visibility>
-                    <Hidden>=NOT(Code.EndDocument())</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style>
@@ -2754,7 +2754,7 @@ First(Fields!LineAmtTaxAmtInvDiscountAmtFormat.Value)</Value>
                   <Width>1.24016in</Width>
                   <ZIndex>1</ZIndex>
                   <Visibility>
-                    <Hidden>=Not(CBool(ReportItems!PrintFooter.Value))</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style />
@@ -2856,7 +2856,7 @@ First(Fields!LineAmtTaxAmtInvDiscountAmtFormat.Value)</Value>
                   <Width>1.15748in</Width>
                   <ZIndex>4</ZIndex>
                   <Visibility>
-                    <Hidden>=NOT(Code.EndDocument())</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style>
@@ -2896,7 +2896,7 @@ First(Fields!LineAmtTaxAmtInvDiscountAmtFormat.Value)</Value>
                   <Width>1.24016in</Width>
                   <ZIndex>5</ZIndex>
                   <Visibility>
-                    <Hidden>=NOT(Code.EndDocument())</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style />
