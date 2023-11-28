@@ -184,7 +184,7 @@ report 52100 "HMP Sales Invoice"
                     column(BillToAddress7; BillToAddress[7])
                     {
                     }
-                    column(ShipmentMethodDescription; ShipmentMethod.Description)
+                    column(ShipmentMethodDescription; "Sales Invoice Header"."Shipment Method Code")
                     {
                     }
                     column(DiscountDate_SIH; '')
@@ -936,7 +936,7 @@ report 52100 "HMP Sales Invoice"
         TotalPriceCaptionLbl: Label 'EXT. PRICE';
         SubtotalCaptionLbl: Label 'SUBTOTAL';
         InvoiceDiscountCaptionLbl: Label 'Invoice Discount:';
-        TotalCaptionTxt: Label 'Total %1:';
+        TotalCaptionTxt: Label 'TOTAL';
         AmountSubjecttoSalesTaxCaptionTxt: Label 'Amount Subject to Sales Tax %1';
         AmountExemptfromSalesTaxCaptionTxt: Label 'Amount Exempt from Sales Tax %1';
         TotalCaption: Text;

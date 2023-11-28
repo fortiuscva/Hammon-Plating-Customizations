@@ -3619,7 +3619,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                   <Width>1.69081in</Width>
                   <ZIndex>2</ZIndex>
                   <Visibility>
-                    <Hidden>=NOT(Code.EndDocument())</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style>
@@ -3661,7 +3661,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                   <Width>1.23932in</Width>
                   <ZIndex>3</ZIndex>
                   <Visibility>
-                    <Hidden>=NOT(Code.EndDocument())</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style>
@@ -3694,7 +3694,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                   <Width>1.69012in</Width>
                   <ZIndex>4</ZIndex>
                   <Visibility>
-                    <Hidden>=Not Code.EndDocument</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style>
@@ -3738,7 +3738,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                   <Width>1.24016in</Width>
                   <ZIndex>5</ZIndex>
                   <Visibility>
-                    <Hidden>=Not Code.EndDocument</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style>
@@ -3774,7 +3774,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                   <Width>1.69012in</Width>
                   <ZIndex>6</ZIndex>
                   <Visibility>
-                    <Hidden>=Not Code.EndDocument</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style>
@@ -3818,7 +3818,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                   <Width>1.24016in</Width>
                   <ZIndex>7</ZIndex>
                   <Visibility>
-                    <Hidden>=Not Code.EndDocument</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style>
@@ -3835,7 +3835,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>=Code.GetData(98,Globals!PageName)</Value>
+                          <Value>=Code.GetData(71,Globals!PageName)</Value>
                           <Style>
                             <FontStyle>Normal</FontStyle>
                             <FontFamily>Segoe UI</FontFamily>
@@ -3877,7 +3877,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                           </Style>
                         </TextRun>
                         <TextRun>
-                          <Value>=CDec(Code.GetData(104,Globals!PageName))</Value>
+                          <Value>=CDec(Code.GetData(55,Globals!PageName))</Value>
                           <Style>
                             <FontStyle>Normal</FontStyle>
                             <FontFamily>Segoe UI</FontFamily>
