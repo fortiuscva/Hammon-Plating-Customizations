@@ -201,7 +201,7 @@ report 52102 "HMP Packing List"
                     column(ShipmentMethodDesc; ShipmentMethod.Description)
                     {
                     }
-                    column(OrderDate_SalesShptHeader; "Sales Shipment Header"."Order Date")
+                    column(OrderDate_SalesShptHeader; "Sales Shipment Header"."Posting Date")
                     {
                     }
                     column(OrderNo_SalesShptHeader; "Sales Shipment Header"."Order No.")
@@ -279,6 +279,8 @@ report 52102 "HMP Packing List"
                         column(TempSalesShptLineNo; TempSalesShipmentLine."No.")
                         {
                         }
+                        column(TempSalesShipmentLine_PackageTrackingNo; TempSalesShipmentLine."Package Tracking No.")
+                        { }
                         column(TempSalesShptLineUOM; TempSalesShipmentLine."Unit of Measure")
                         {
                         }
@@ -747,7 +749,7 @@ report 52102 "HMP Packing List"
         PageCaptionLbl: Label 'Page:';
         ShipViaCaptionLbl: Label 'SHIP VIA';
         PODateCaptionLbl: Label 'P.O. Date';
-        OurOrderNoCaptionLbl: Label 'S/O #';
+        OurOrderNoCaptionLbl: Label 'SALES ORDER #';
         ItemNoCaptionLbl: Label 'Item Number';
         UnitCaptionLbl: Label 'UOM';
         DescriptionCaptionLbl: Label 'Item Description';
