@@ -1,7 +1,7 @@
 report 52102 "HMP Packing List"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './PackingList.rdl';
+    RDLCLayout = './Reports/PackingList.rdl';
     Caption = 'HMP Packing List';
 
     dataset

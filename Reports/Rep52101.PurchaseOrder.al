@@ -1,7 +1,7 @@
 report 52101 "HMP Purchase Order"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './HMPPurchaseOrder.rdl';
+    RDLCLayout = './Reports/HMPPurchaseOrder.rdl';
     Caption = 'HMP Purchase Order';
 
     dataset
