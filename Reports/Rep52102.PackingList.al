@@ -43,6 +43,8 @@ report 52102 "HMP Packing List"
             { }
             column(Verified_Caption; Verified_CaptionLbl)
             { }
+            column(SSH_SellToContact; "Sales Shipment Header"."Sell-to Contact")
+            { }
             dataitem("Sales Shipment Line"; "Sales Shipment Line")
             {
                 DataItemLink = "Document No." = FIELD("No.");
@@ -281,7 +283,7 @@ report 52102 "HMP Packing List"
                         }
                         column(TempSalesShipmentLine_PackageTrackingNo; TempSalesShipmentLine."Package Tracking No.")
                         { }
-                        column(TempSalesShptLineUOM; TempSalesShipmentLine."Unit of Measure")
+                        column(TempSalesShptLineUOM; TempSalesShipmentLine."Unit of Measure Code")
                         {
                         }
                         column(TempSalesShptLineQy; TempSalesShipmentLine.Quantity)

@@ -644,8 +644,8 @@ report 52101 "HMP Purchase Order"
         ShipViaCaptionLbl: Label 'SHIP VIA';
         TermsCaptionLbl: Label 'TERMS';
         PhoneNoCaptionLbl: Label 'Phone No.';
-        TaxIdentTypeCaptionLbl: Label 'ORDER BY';
-        ItemNoCaptionLbl: Label 'OUT ITEM #';
+        TaxIdentTypeCaptionLbl: Label 'ORDERED BY';
+        ItemNoCaptionLbl: Label 'OUR ITEM #';
         UnitCaptionLbl: Label 'UOM';
         DescriptionCaptionLbl: Label 'ITEM DESCRIPTION';
         QuantityCaptionLbl: Label 'QTY. ORDERED';
