@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Microsoft cloud sandbox",
+            "name": "Hammon Plating Sandbox",
             "request": "launch",
             "type": "al",
             "tenant": "96d3c8ab-5439-4d1e-add6-edb58e1b26d9",
