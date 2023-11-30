@@ -191,7 +191,7 @@ report 52103 "HMP Certificate Of Compliance"
         Purchase_Order_No_CaptionLbl: Label 'Purchase Order:';
         Part_Number_CaptionLbl: Label 'Part Number:';
         Description_CaptionLbl: Label 'Description:';
-        WO_No_CaptionLbl: Label 'Work Order:';
+        WO_No_CaptionLbl: Label 'Sales Order:';
         Revision_CaptionLbl: Label 'Revision:';
         Qty_CaptionLbl: Label 'Quantity:';
         Planting_Spec_CaptionLbl: Label 'Plating Spec:';
