@@ -2134,12 +2134,12 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Code.GetData(23,Globals!PageName)</Value>
+                      <Value>=CDate(Code.GetData(23,Globals!PageName))</Value>
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontWeight>Bold</FontWeight>
-                        <Format>d MMMM, yyyy</Format>
+                        <Format>d MMM yyyy</Format>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -3334,6 +3334,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -3571,7 +3572,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                           <Style>
                             <FontStyle>Normal</FontStyle>
                             <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
+                            <FontSize>9pt</FontSize>
                             <FontWeight>Bold</FontWeight>
                           </Style>
                         </TextRun>
@@ -3601,7 +3602,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                           <Style>
                             <FontStyle>Normal</FontStyle>
                             <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
+                            <FontSize>9pt</FontSize>
                             <FontWeight>Normal</FontWeight>
                             <Format>=Code.GetData(62,Globals!PageName)</Format>
                           </Style>
@@ -3611,7 +3612,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                           <Style>
                             <FontStyle>Normal</FontStyle>
                             <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
+                            <FontSize>9pt</FontSize>
                             <FontWeight>Normal</FontWeight>
                             <Format>=Code.GetData(62,Globals!PageName)</Format>
                           </Style>
@@ -3881,7 +3882,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                           <Style>
                             <FontStyle>Normal</FontStyle>
                             <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
+                            <FontSize>9pt</FontSize>
                             <FontWeight>Bold</FontWeight>
                           </Style>
                         </TextRun>
@@ -3892,15 +3893,21 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                     </Paragraph>
                   </Paragraphs>
                   <Top>0.65695in</Top>
-                  <Left>0.00001in</Left>
+                  <Left>0.9861in</Left>
                   <Height>11pt</Height>
-                  <Width>1.69081in</Width>
+                  <Width>0.70472in</Width>
                   <ZIndex>8</ZIndex>
                   <Visibility>
                     <Hidden>=Not Code.EndDocument</Hidden>
                   </Visibility>
                   <DataElementOutput>NoOutput</DataElementOutput>
                   <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                    <TopBorder>
+                      <Style>Solid</Style>
+                    </TopBorder>
                     <PaddingRight>2pt</PaddingRight>
                   </Style>
                 </Textbox>
@@ -3914,7 +3921,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                           <Style>
                             <FontStyle>Normal</FontStyle>
                             <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
+                            <FontSize>9pt</FontSize>
                             <Format>=Code.GetData(62,Globals!PageName)</Format>
                           </Style>
                         </TextRun>
@@ -3923,7 +3930,7 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                           <Style>
                             <FontStyle>Normal</FontStyle>
                             <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
+                            <FontSize>9pt</FontSize>
                             <Format>=Code.GetData(62,Globals!PageName)</Format>
                           </Style>
                         </TextRun>
@@ -3946,6 +3953,9 @@ Cstr(Fields!PreAllocatedCreditValue.Value)
                     <Border>
                       <Style>None</Style>
                     </Border>
+                    <TopBorder>
+                      <Style>Solid</Style>
+                    </TopBorder>
                     <PaddingLeft>2pt</PaddingLeft>
                     <PaddingRight>2pt</PaddingRight>
                   </Style>
