@@ -4330,6 +4330,9 @@ Cstr(Fields!CustBalanceCaption.Value)
               <Height>11pt</Height>
               <Width>3.02467cm</Width>
               <ZIndex>4</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
@@ -4355,6 +4358,9 @@ Cstr(Fields!CustBalanceCaption.Value)
               <Height>11pt</Height>
               <Width>3.02467cm</Width>
               <ZIndex>5</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
@@ -4380,6 +4386,9 @@ Cstr(Fields!CustBalanceCaption.Value)
               <Height>11pt</Height>
               <Width>3.02467cm</Width>
               <ZIndex>6</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
@@ -4403,8 +4412,11 @@ Cstr(Fields!CustBalanceCaption.Value)
               <Top>7.14537cm</Top>
               <Left>11.7318cm</Left>
               <Height>11pt</Height>
-              <Width>3.02467cm</Width>
+              <Width>2.15684cm</Width>
               <ZIndex>7</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
@@ -4428,7 +4440,7 @@ Cstr(Fields!CustBalanceCaption.Value)
               <Top>5.9025cm</Top>
               <Left>11.7318cm</Left>
               <Height>11pt</Height>
-              <Width>3.02467cm</Width>
+              <Width>2.15686cm</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
@@ -4699,6 +4711,9 @@ Cstr(Fields!CustBalanceCaption.Value)
               <Height>11pt</Height>
               <Width>3.16787cm</Width>
               <ZIndex>18</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
@@ -4726,6 +4741,9 @@ Cstr(Fields!CustBalanceCaption.Value)
               <Height>11pt</Height>
               <Width>3.16787cm</Width>
               <ZIndex>19</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
@@ -4753,6 +4771,9 @@ Cstr(Fields!CustBalanceCaption.Value)
               <Height>11pt</Height>
               <Width>3.16787cm</Width>
               <ZIndex>20</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
@@ -4776,10 +4797,13 @@ Cstr(Fields!CustBalanceCaption.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>7.14537cm</Top>
-              <Left>14.75645cm</Left>
+              <Left>13.88864cm</Left>
               <Height>11pt</Height>
-              <Width>3.16787cm</Width>
+              <Width>4.03568cm</Width>
               <ZIndex>21</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
@@ -4828,9 +4852,9 @@ Cstr(Fields!CustBalanceCaption.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>5.9025cm</Top>
-              <Left>14.75645cm</Left>
+              <Left>13.88864cm</Left>
               <Height>11pt</Height>
-              <Width>3.16787cm</Width>
+              <Width>4.03568cm</Width>
               <ZIndex>23</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
@@ -5172,7 +5196,7 @@ Cstr(Fields!CustBalanceCaption.Value)
               <Top>179.0555pt</Top>
               <Left>332.55518pt</Left>
               <Height>11pt</Height>
-              <Width>1.19081in</Width>
+              <Width>0.84915in</Width>
               <ZIndex>36</ZIndex>
               <Style>
                 <Border>
@@ -5200,7 +5224,7 @@ Cstr(Fields!CustBalanceCaption.Value)
               <Top>190.50554pt</Top>
               <Left>4.61733in</Left>
               <Height>11pt</Height>
-              <Width>3.02843cm</Width>
+              <Width>2.16062cm</Width>
               <ZIndex>37</ZIndex>
               <Style>
                 <Border>
@@ -5228,9 +5252,9 @@ Cstr(Fields!CustBalanceCaption.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>179.0555pt</Top>
-              <Left>14.75645cm</Left>
+              <Left>13.88864cm</Left>
               <Height>11pt</Height>
-              <Width>1.24719in</Width>
+              <Width>1.58885in</Width>
               <ZIndex>38</ZIndex>
               <Style>
                 <Border>
@@ -5258,9 +5282,9 @@ Cstr(Fields!CustBalanceCaption.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>190.50554pt</Top>
-              <Left>14.75645cm</Left>
+              <Left>13.88864cm</Left>
               <Height>11pt</Height>
-              <Width>1.24719in</Width>
+              <Width>1.58885in</Width>
               <ZIndex>39</ZIndex>
               <Style>
                 <Border>
