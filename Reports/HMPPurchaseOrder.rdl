@@ -1351,7 +1351,7 @@ First(Fields!LineAmtTaxAmtInvDiscountAmtFormat.Value)</Value>
                       <Value>=CDate(Code.GetData(26,1))</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>8pt</FontSize>
+                        <FontSize>11pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                         <Format>d MMM yyyy</Format>
                       </Style>
@@ -1386,7 +1386,7 @@ First(Fields!LineAmtTaxAmtInvDiscountAmtFormat.Value)</Value>
                       <Value>=Code.GetData(25,1)</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>8pt</FontSize>
+                        <FontSize>11pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>

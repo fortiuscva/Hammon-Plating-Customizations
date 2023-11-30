@@ -321,7 +321,7 @@ report 52100 "HMP Sales Invoice"
                         column(TempSalesInvoiceLineNo; TempSalesInvoiceLine."No.")
                         {
                         }
-                        column(TempSalesInvoiceLineUOM; TempSalesInvoiceLine."Unit of Measure")
+                        column(TempSalesInvoiceLineUOM; TempSalesInvoiceLine."Unit of Measure Code")
                         {
                         }
                         column(OrderedQuantity; OrderedQuantity)

@@ -2809,7 +2809,7 @@ Cstr(Fields!SSH_SellToContact.Value)
                       <Value>=Code.GetData(11,1)</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2890,7 +2890,7 @@ Cstr(Fields!SSH_SellToContact.Value)
                     </Paragraph>
                   </Paragraphs>
                   <Height>11pt</Height>
-                  <Width>0.43243in</Width>
+                  <Width>0.58291in</Width>
                   <Style>
                     <PaddingLeft>2pt</PaddingLeft>
                   </Style>
@@ -2912,9 +2912,9 @@ Cstr(Fields!SSH_SellToContact.Value)
                     </Paragraph>
                   </Paragraphs>
                   <Top>0.82417in</Top>
-                  <Left>0.43937in</Left>
+                  <Left>0.58291in</Left>
                   <Height>11pt</Height>
-                  <Width>1.54148in</Width>
+                  <Width>1.39794in</Width>
                   <ZIndex>1</ZIndex>
                   <Style />
                 </Textbox>
@@ -2935,9 +2935,9 @@ Cstr(Fields!SSH_SellToContact.Value)
                     </Paragraph>
                   </Paragraphs>
                   <Top>0.65763in</Top>
-                  <Left>0.43937in</Left>
+                  <Left>0.58291in</Left>
                   <Height>11pt</Height>
-                  <Width>1.54148in</Width>
+                  <Width>1.39794in</Width>
                   <ZIndex>2</ZIndex>
                   <Style />
                 </Textbox>
@@ -2958,9 +2958,9 @@ Cstr(Fields!SSH_SellToContact.Value)
                     </Paragraph>
                   </Paragraphs>
                   <Top>0.4911in</Top>
-                  <Left>0.43937in</Left>
+                  <Left>0.58291in</Left>
                   <Height>11pt</Height>
-                  <Width>1.54148in</Width>
+                  <Width>1.39794in</Width>
                   <ZIndex>3</ZIndex>
                   <Style />
                 </Textbox>
@@ -2981,9 +2981,9 @@ Cstr(Fields!SSH_SellToContact.Value)
                     </Paragraph>
                   </Paragraphs>
                   <Top>0.32456in</Top>
-                  <Left>0.43937in</Left>
+                  <Left>0.58291in</Left>
                   <Height>11pt</Height>
-                  <Width>1.54148in</Width>
+                  <Width>1.39794in</Width>
                   <ZIndex>4</ZIndex>
                   <Style />
                 </Textbox>
@@ -3004,9 +3004,9 @@ Cstr(Fields!SSH_SellToContact.Value)
                     </Paragraph>
                   </Paragraphs>
                   <Top>0.15803in</Top>
-                  <Left>0.43937in</Left>
+                  <Left>0.58291in</Left>
                   <Height>11pt</Height>
-                  <Width>1.54148in</Width>
+                  <Width>1.39794in</Width>
                   <ZIndex>5</ZIndex>
                   <Style />
                 </Textbox>
@@ -3026,9 +3026,9 @@ Cstr(Fields!SSH_SellToContact.Value)
                       <Style />
                     </Paragraph>
                   </Paragraphs>
-                  <Left>0.43937in</Left>
+                  <Left>0.58291in</Left>
                   <Height>11pt</Height>
-                  <Width>1.54148in</Width>
+                  <Width>1.39794in</Width>
                   <ZIndex>6</ZIndex>
                   <Style />
                 </Textbox>
@@ -3266,22 +3266,28 @@ Cstr(Fields!SSH_SellToContact.Value)
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>=Code.GetData(13,1)</Value>
+                          <Value>=CDate(Code.GetData(13,1))</Value>
                           <Style>
                             <FontFamily>Segoe UI</FontFamily>
                             <FontSize>8pt</FontSize>
-                            <Format>d</Format>
+                            <Format>d MMM yyyy</Format>
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Left</TextAlign>
+                      </Style>
                     </Paragraph>
                   </Paragraphs>
                   <Left>1.15752in</Left>
                   <Height>11pt</Height>
                   <Width>0.88973in</Width>
                   <ZIndex>1</ZIndex>
-                  <Style />
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
                 </Textbox>
                 <Textbox Name="ShipmentDateCaption2">
                   <KeepTogether>true</KeepTogether>
@@ -3314,15 +3320,17 @@ Cstr(Fields!SSH_SellToContact.Value)
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>=Code.GetData(49,1)</Value>
+                          <Value>=CDate(Code.GetData(49,1))</Value>
                           <Style>
                             <FontFamily>Segoe UI</FontFamily>
                             <FontSize>8pt</FontSize>
-                            <Format>d</Format>
+                            <Format>d MMM yyyy</Format>
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Left</TextAlign>
+                      </Style>
                     </Paragraph>
                   </Paragraphs>
                   <Top>0.15277in</Top>
@@ -3330,7 +3338,11 @@ Cstr(Fields!SSH_SellToContact.Value)
                   <Height>11pt</Height>
                   <Width>0.88973in</Width>
                   <ZIndex>3</ZIndex>
-                  <Style />
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
                 </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
@@ -3792,6 +3804,7 @@ Cstr(Fields!SSH_SellToContact.Value)
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                     <TextRun>
@@ -3809,7 +3822,7 @@ Cstr(Fields!SSH_SellToContact.Value)
               <Top>7.77093cm</Top>
               <Left>0cm</Left>
               <Height>0.6cm</Height>
-              <Width>4.786cm</Width>
+              <Width>5.03136cm</Width>
               <ZIndex>10</ZIndex>
               <Style>
                 <Border>
@@ -3937,10 +3950,27 @@ Cstr(Fields!SSH_SellToContact.Value)
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Print_Date_Caption.Value, "DataSet_Result") &amp; "  " &amp; Today()</Value>
+                      <Value>=First(Fields!Print_Date_Caption.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
+                        <Format>d MMM yyyy</Format>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value xml:space="preserve"> </Value>
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>d MMM yyyy</Format>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Globals!ExecutionTime</Value>
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>d MMM yyyy</Format>
                       </Style>
                     </TextRun>
                   </TextRuns>
