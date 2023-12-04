@@ -110,7 +110,7 @@ report 52102 "HMP Packing List"
                     column(CompanyInfo1Picture; CompanyInfo1.Picture)
                     {
                     }
-                    column(CompanyInfoPicture; CompanyInfo1.Picture)
+                    column(CompanyInfoPicture; CompanyInfo3.Picture)
                     {
                     }
                     column(CompanyAddress1; CompanyAddress[1])
