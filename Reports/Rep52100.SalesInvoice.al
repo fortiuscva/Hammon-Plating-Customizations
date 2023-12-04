@@ -405,8 +405,6 @@ report 52100 "HMP Sales Invoice"
                         column(QuantityCaption; QuantityCaptionLbl)
                         {
                         }
-                        column(Serial_Lot_Caption; Serial_Lot_CaptionLbl)
-                        { }
                         column(LineNo; LineNo)
                         { }
                         column(UnitPriceCaption; UnitPriceCaptionLbl)
@@ -482,6 +480,39 @@ report 52100 "HMP Sales Invoice"
                                 SetRange(Number, 1, TempPostedAsmLine.Count);
                             end;
                         }
+                        dataitem(ItemTrackingSpec; Integer)
+                        {
+                            DataItemTableView = sorting(Number);
+                            DataItemLinkReference = SalesInvLine;
+                            column(TempItemLedgEntry_ItemNo; TempTrackingSpecBuffer."Item No.")
+                            { }
+                            column(TempItemLedgEntry_LotNo; LotNo)
+                            { }
+                            column(Tracking_Number; Number)
+                            { }
+                            column(TempTrackingSpecBuffer_Qty; TempTrackingSpecBuffer."Quantity (Base)")
+                            { }
+                            column(Lot_Serial_Caption; Serial_Lot_CaptionLbl)
+                            { }
+                            trigger OnAfterGetRecord()
+                            begin
+                                if Number = 1 then begin
+                                    TempTrackingSpecBuffer.FindSet();
+                                    LotNo := TempTrackingSpecBuffer."Serial No.";
+                                end else begin
+                                    TempTrackingSpecBuffer.Next();
+                                    LotNo := TempTrackingSpecBuffer."Serial No.";
+                                end;
+                            end;
+
+                            trigger OnPreDataItem()
+                            begin
+                                TempTrackingSpecBuffer.SetRange("Source Ref. No.", TempSalesInvoiceLine."Line No.");
+                                if TempTrackingSpecBuffer.Count = 0 then
+                                    CurrReport.Break();
+                                SetRange(Number, 1, TempTrackingSpecBuffer.Count);
+                            end;
+                        }
 
                         trigger OnAfterGetRecord()
                         begin
@@ -542,6 +573,8 @@ report 52100 "HMP Sales Invoice"
 
                                 if "No." <> '' then
                                     LineNo += 1;
+
+                                GetSerialLotNo(TempSalesInvoiceLine);
                             end;
 
                             CollectAsmInformation(TempSalesInvoiceLine);
@@ -944,7 +977,9 @@ report 52100 "HMP Sales Invoice"
         AmountExemptfromSalesTaxCaption: Text;
         DisplayAdditionalFeeNote: Boolean;
         LineNo: Integer;
-        Serial_Lot_CaptionLbl: Label 'SERIAL #/LOT';
+        Serial_Lot_CaptionLbl: Label 'Lot / Serial Number';
+        TempTrackingSpecBuffer: Record "Tracking Specification" temporary;
+        LotNo: Text;
 
     procedure InitLogInteraction()
     begin
@@ -1070,6 +1105,16 @@ report 52100 "HMP Sales Invoice"
         if SalesInvoiceLine.FindLast() then
             if SalesInvoiceLine."Line No." > HighestLineNo then
                 HighestLineNo := SalesInvoiceLine."Line No.";
+    end;
+
+    local procedure GetSerialLotNo(TempSalesInvoiceLine: Record "Sales Invoice Line" temporary)
+    var
+        ItemTrackDocMgmt: Codeunit "Item Tracking Doc. Management";
+    begin
+        Clear(TempTrackingSpecBuffer);
+        TempTrackingSpecBuffer.DeleteAll();
+
+        ItemTrackDocMgmt.RetrieveDocumentItemTracking(TempTrackingSpecBuffer, "Sales Invoice Header"."No.", DATABASE::"Sales Invoice Header", 0);
     end;
 }
 
