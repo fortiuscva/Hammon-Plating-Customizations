@@ -3,6 +3,8 @@ report 52100 "HMP Sales Invoice"
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/HMPSalesInvoice.rdl';
     Caption = 'HMP Sales Invoice';
+    UsageCategory = ReportsAndAnalysis;
+    ApplicationArea = all;
 
     dataset
     {
@@ -30,6 +32,8 @@ report 52100 "HMP Sales Invoice"
             column(SalesTax_Caption; SalesTax_CaptionLbl)
             { }
             column(Pre_allocated_Credit; Pre_allocated_CreditLbl)
+            { }
+            column(ShipmentNo; SalesShipmentHeader."No.")
             { }
             dataitem("Sales Invoice Line"; "Sales Invoice Line")
             {
@@ -638,6 +642,12 @@ report 52100 "HMP Sales Invoice"
 
             trigger OnAfterGetRecord()
             begin
+                if "Sales Invoice Header"."Order No." <> '' then begin
+                    SalesShipmentHeader.reset();
+                    SalesShipmentHeader.Setrange("Order No.", "Sales Invoice Header"."Order No.");
+                    if SalesShipmentHeader.FindFirst() then;
+                end;
+
                 if PrintCompany then
                     if RespCenter.Get("Responsibility Center") then begin
                         FormatAddress.RespCenter(CompanyAddress, RespCenter);
@@ -883,6 +893,7 @@ report 52100 "HMP Sales Invoice"
         SalesSetup: Record "Sales & Receivables Setup";
         Customer: Record Customer;
         OrderLine: Record "Sales Line";
+        SalesShipmentHeader: record "Sales Shipment Header";
         ShipmentLine: Record "Sales Shipment Line";
         TempSalesInvoiceLine: Record "Sales Invoice Line" temporary;
         TempSalesInvoiceLineAsm: Record "Sales Invoice Line" temporary;
