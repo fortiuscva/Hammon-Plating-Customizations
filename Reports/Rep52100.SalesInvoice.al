@@ -33,7 +33,7 @@ report 52100 "HMP Sales Invoice"
             { }
             column(Pre_allocated_Credit; Pre_allocated_CreditLbl)
             { }
-            column(ShipmentNo; SalesShipmentHeader."No.")
+            column(ShipmentNo; TempSalesShptLine."Document No.")
             { }
             dataitem("Sales Invoice Line"; "Sales Invoice Line")
             {
@@ -641,12 +641,23 @@ report 52100 "HMP Sales Invoice"
             }
 
             trigger OnAfterGetRecord()
+            var
+                ShptFoundVarLcl: boolean;
             begin
-                if "Sales Invoice Header"."Order No." <> '' then begin
-                    SalesShipmentHeader.reset();
-                    SalesShipmentHeader.Setrange("Order No.", "Sales Invoice Header"."Order No.");
-                    if SalesShipmentHeader.FindFirst() then;
-                end;
+                ShptFoundVarLcl := false;
+                SalesInvoiceLineRecLcl.Reset();
+                SalesInvoiceLineRecLcl.SetRange("Document No.", "Sales Invoice Header"."No.");
+                SalesInvoiceLineRecLcl.SetRange(Type, SalesInvoiceLineRecLcl.Type::Item);
+                SalesInvoiceLineRecLcl.SetFilter(Quantity, '<>%1', 0);
+                if SalesInvoiceLineRecLcl.FindSet() then
+                    repeat
+                        TempSalesShptLine.Reset();
+                        TempSalesShptLine.DeleteAll();
+                        SalesInvoiceLineRecLcl.GetSalesShptLines(TempSalesShptLine);
+                        if TempSalesShptLine.FindFirst() then
+                            ShptFoundVarLcl := true
+
+                    until (SalesInvoiceLineRecLcl.Next() = 0) or ShptFoundVarLcl;
 
                 if PrintCompany then
                     if RespCenter.Get("Responsibility Center") then begin
@@ -893,7 +904,8 @@ report 52100 "HMP Sales Invoice"
         SalesSetup: Record "Sales & Receivables Setup";
         Customer: Record Customer;
         OrderLine: Record "Sales Line";
-        SalesShipmentHeader: record "Sales Shipment Header";
+        SalesInvoiceLineRecLcl: Record "Sales Invoice Line";
+        TempSalesShptLine: Record "Sales Shipment Line" temporary;
         ShipmentLine: Record "Sales Shipment Line";
         TempSalesInvoiceLine: Record "Sales Invoice Line" temporary;
         TempSalesInvoiceLineAsm: Record "Sales Invoice Line" temporary;
