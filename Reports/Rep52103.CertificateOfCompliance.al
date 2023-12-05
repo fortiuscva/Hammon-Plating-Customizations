@@ -185,7 +185,7 @@ report 52103 "HMP Certificate Of Compliance"
         CompanyAddress: array[10] of Text[100];
         FormatAddress: Codeunit "Format Address";
         Certificate_Of_Comp_CaptionLbl: Label 'Certificate Of Compliance';
-        HardcodedText_Lbl: Label 'Hammon Plating hereby certifies that the part number listed below has been processed in accordance with all of the purchase order, drawing and other specified requirements. All materials conform to Quality Control & Calibration System and Inspection requirements per ISO 9001 and AS9100 and all other standards applicable to electroplating';
+        HardcodedText_Lbl: Label 'Hammon Plating hereby certifies that the part number listed below has been processed in accordance with all of the purchase order, drawing and other specified requirements. All materials conform to Quality Control & Calibration System and Inspection requirements per ISO 9001 and AS9100 and all other standards applicable to electroplating.';
         Customer_CaptionLbl: Label 'Customer:';
         Certification_Date_CaptionLbl: Label 'Certification Date:';
         Purchase_Order_No_CaptionLbl: Label 'Purchase Order:';
