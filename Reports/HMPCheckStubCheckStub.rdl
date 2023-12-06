@@ -956,10 +956,10 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="[" + Cstr(Choose(80,Split(Cstr(ReportItems!FooterInfo.Value), Chr(177)))) + "]"</Value>
+                      <Value>=CDate(Cstr(Choose(80,Split(Cstr(ReportItems!FooterInfo.Value), Chr(177)))))</Value>
                       <Style>
-                        <FontFamily>IDAutomationSec1B</FontFamily>
                         <FontWeight>Normal</FontWeight>
+                        <Format>d MMM yyyy</Format>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -968,7 +968,7 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>2.42887in</Top>
+              <Top>2.30387in</Top>
               <Left>3.56989in</Left>
               <Height>0.16654in</Height>
               <Width>1.96172in</Width>
@@ -986,9 +986,8 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="[" + Cstr(Choose(81,Split(Cstr(ReportItems!FooterInfo.Value), Chr(177)))) + "]"</Value>
+                      <Value>=Cstr(Choose(81,Split(Cstr(ReportItems!FooterInfo.Value), Chr(177))))</Value>
                       <Style>
-                        <FontFamily>IDAutomationSec1B</FontFamily>
                         <FontWeight>Normal</FontWeight>
                       </Style>
                     </TextRun>
@@ -998,7 +997,7 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>2.42887in</Top>
+              <Top>2.30387in</Top>
               <Left>5.60106in</Left>
               <Height>0.16654in</Height>
               <Width>1.96981in</Width>
@@ -1042,9 +1041,8 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="[" + Cstr(Choose(97,Split(Cstr(ReportItems!FooterInfo.Value), Chr(177)))) + "]"</Value>
+                      <Value>=Cstr(Choose(97,Split(Cstr(ReportItems!FooterInfo.Value), Chr(177))))</Value>
                       <Style>
-                        <FontFamily>IDAutomationSec1B</FontFamily>
                         <FontWeight>Normal</FontWeight>
                       </Style>
                     </TextRun>
@@ -1054,7 +1052,7 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>2.04023in</Top>
+              <Top>1.91523in</Top>
               <Left>0.16654in</Left>
               <Height>0.16654in</Height>
               <Width>6.77953in</Width>
@@ -1349,7 +1347,7 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>2.20677in</Top>
+              <Top>2.08177in</Top>
               <Left>0.16761in</Left>
               <Height>0.16654in</Height>
               <Width>6.77953in</Width>
