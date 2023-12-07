@@ -500,6 +500,8 @@ report 52100 "HMP Sales Invoice"
                             { }
                             trigger OnAfterGetRecord()
                             begin
+                                clear(AmountExclInvDisc);
+                                Clear(TempSalesInvoiceLine."Amount Including VAT");
                                 if Number = 1 then begin
                                     TempTrackingSpecBuffer.FindSet();
                                     LotNo := TempTrackingSpecBuffer."Serial No.";
