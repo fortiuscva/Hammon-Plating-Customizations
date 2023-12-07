@@ -472,6 +472,9 @@ report 52107 "HMP Aged Accounts Payable"
                     column(Control1020001Caption; CaptionClassTranslate(GetCurrencyCaptionCode(Vendor."Currency Code")))
                     {
                     }
+                    column(DocumentDateVarGbl; DocumentDateVarGbl)
+                    {
+                    }
 
                     trigger OnAfterGetRecord()
                     begin
@@ -533,14 +536,16 @@ report 52107 "HMP Aged Accounts Payable"
                             "TotalBalanceDue$" := "TotalBalanceDue$" + "BalanceDue$"[j];
                         CalcPercents("TotalBalanceDue$", "BalanceDue$");
 
-                        PostingDateVarGbl := "Vendor Ledger Entry"."Posting Date";
+                        //PostingDateVarGbl := "Vendor Ledger Entry"."Posting Date";
 
                         "Vendor Ledger Entry" := TempVendLedgEntry;
-                        "Vendor Ledger Entry"."Posting Date" := PostingDateVarGbl;
+                        //"Vendor Ledger Entry"."Posting Date" := PostingDateVarGbl;
                         if UseExternalDocNo then
                             DocNo := "Vendor Ledger Entry"."External Document No."
                         else
                             DocNo := "Vendor Ledger Entry"."Document No.";
+
+                        DocumentDateVarGbl := "Vendor Ledger Entry"."Document Date";
 
                         TotalNumberOfEntries -= 1;
                         if TotalNumberOfEntries = 0 then begin
@@ -935,6 +940,7 @@ report 52107 "HMP Aged Accounts Payable"
         GrandBalanceDue: array[4] of Decimal;
         GrandTotalBalanceDue: Decimal;
         TotalNumberOfEntries: Integer;
+        DocumentDateVarGbl: Date;
 
     local procedure InsertTemp(var VendLedgEntry: Record "Vendor Ledger Entry")
     begin
@@ -1070,7 +1076,8 @@ report 52107 "HMP Aged Accounts Payable"
         ExcelBuf.AddColumn(Vendor."No.", false, '', false, false, false, '', ExcelBuf."Cell Type"::Text);
         ExcelBuf.AddColumn(Vendor.Name, false, '', false, false, false, '', ExcelBuf."Cell Type"::Text);
         ExcelBuf.AddColumn(PaymentTermsRecGbl.Description, false, '', false, false, false, '', ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn("Vendor Ledger Entry"."Posting Date", false, '', false, false, false, '', ExcelBuf."Cell Type"::date);
+        //ExcelBuf.AddColumn("Vendor Ledger Entry"."Posting Date", false, '', false, false, false, '', ExcelBuf."Cell Type"::date);
+        ExcelBuf.AddColumn(DocumentDateVarGbl, false, '', false, false, false, '', ExcelBuf."Cell Type"::date);
         if PrintDetail then begin
             ExcelBuf.AddColumn(AgingDate, false, '', false, false, false, '', ExcelBuf."Cell Type"::Date);
             ExcelBuf.AddColumn("Vendor Ledger Entry".Description, false, '', false, false, false, '', ExcelBuf."Cell Type"::Text);
