@@ -275,6 +275,7 @@ report 52107 "HMP Aged Accounts Payable"
 
                     trigger OnAfterGetRecord()
                     begin
+                        clear(PostingDateVarGbl);
                         SetRange("Date Filter", 0D, PeriodEndingDate[1]);
                         CalcFields("Remaining Amount", Amount);
                         if "Remaining Amount" <> 0 then
@@ -331,7 +332,7 @@ report 52107 "HMP Aged Accounts Payable"
                     column(DocNo; DocNo)
                     {
                     }
-                    column(Vendor_Ledger_Entry_PostingDate; format("Vendor Ledger Entry"."Posting Date"))
+                    column(Vendor_Ledger_Entry_PostingDate; format(PostingDateVarGbl))
                     { }
                     column(Vendor_Ledger_Entry_Amount; abs("Vendor Ledger Entry".Amount))
                     { }
@@ -514,6 +515,7 @@ report 52107 "HMP Aged Accounts Payable"
                             AgingMethod::"Document Date":
                                 AgingDate := TempVendLedgEntry."Document Date";
                         end;
+
                         j := 0;
                         while AgingDate < PeriodEndingDate[j + 1] do
                             j := j + 1;
@@ -864,6 +866,7 @@ report 52107 "HMP Aged Accounts Payable"
         UseExternalDocNo: Boolean;
         DocNo: Code[35];
         PrintVendorWithZeroBalance: Boolean;
+        PostingDateVarGbl: Date;
         AmountsAreInLbl: Label 'Amounts are in %1', Comment = '%1=currency code';
         VendorBlockedLbl: Label '*** This vendor is blocked for %1 processing ***', Comment = '%1=blocking type';
         PrivacyBlockedTxt: Label '*** This vendor is blocked for privacy ***.';
@@ -935,6 +938,7 @@ report 52107 "HMP Aged Accounts Payable"
         with TempVendLedgEntry do begin
             if Get(VendLedgEntry."Entry No.") then
                 exit;
+            PostingDateVarGbl := VendLedgEntry."Posting Date";
             TempVendLedgEntry := VendLedgEntry;
             case AgingMethod of
                 AgingMethod::"Due Date":
