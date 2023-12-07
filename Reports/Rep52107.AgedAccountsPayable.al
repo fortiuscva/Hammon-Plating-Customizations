@@ -332,7 +332,7 @@ report 52107 "HMP Aged Accounts Payable"
                     column(DocNo; DocNo)
                     {
                     }
-                    column(Vendor_Ledger_Entry_PostingDate; format(PostingDateVarGbl))
+                    column(Vendor_Ledger_Entry_PostingDate; format("Vendor Ledger Entry"."Posting Date"))
                     { }
                     column(Vendor_Ledger_Entry_Amount; abs("Vendor Ledger Entry".Amount))
                     { }
@@ -533,7 +533,10 @@ report 52107 "HMP Aged Accounts Payable"
                             "TotalBalanceDue$" := "TotalBalanceDue$" + "BalanceDue$"[j];
                         CalcPercents("TotalBalanceDue$", "BalanceDue$");
 
+                        PostingDateVarGbl := "Vendor Ledger Entry"."Posting Date";
+
                         "Vendor Ledger Entry" := TempVendLedgEntry;
+                        "Vendor Ledger Entry"."Posting Date" := PostingDateVarGbl;
                         if UseExternalDocNo then
                             DocNo := "Vendor Ledger Entry"."External Document No."
                         else
@@ -938,7 +941,6 @@ report 52107 "HMP Aged Accounts Payable"
         with TempVendLedgEntry do begin
             if Get(VendLedgEntry."Entry No.") then
                 exit;
-            PostingDateVarGbl := VendLedgEntry."Posting Date";
             TempVendLedgEntry := VendLedgEntry;
             case AgingMethod of
                 AgingMethod::"Due Date":
