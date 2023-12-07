@@ -1723,7 +1723,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Vendor_Ledger_Entry_PostingDate.Value</Value>
+                                  <Value>=Fields!DocumentDateVarGbl.Value</Value>
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                   </Style>
@@ -1741,6 +1741,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -5579,6 +5580,9 @@ End Function</Code>
         </Field>
         <Field Name="Control1020001Caption">
           <DataField>Control1020001Caption</DataField>
+        </Field>
+        <Field Name="DocumentDateVarGbl">
+          <DataField>DocumentDateVarGbl</DataField>
         </Field>
       </Fields>
       <Query>
