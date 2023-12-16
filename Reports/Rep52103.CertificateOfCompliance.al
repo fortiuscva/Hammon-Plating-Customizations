@@ -98,7 +98,7 @@ report 52103 "HMP Certificate Of Compliance"
                         ExtTextHeader: Record "Extended Text Header";
                     begin
                         if ExtTextHeader.Get("Extended Text Line"."Table Name", "Extended Text Line"."No.", "Extended Text Line"."Language Code", "Extended Text Line"."Text No.") then
-                            if not ExtTextHeader."HMP CoC" then
+                            if not ExtTextHeader."HMP COC" then
                                 CurrReport.Break();
                     end;
                 }
