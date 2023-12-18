@@ -7,6 +7,8 @@ codeunit 52101 "HMP General Functions"
     begin
         if ItemRecLcl.get(pItemNo) then
             exit(Format(ItemRecLcl.Type));
+
+        exit('');
     end;
 
 }
