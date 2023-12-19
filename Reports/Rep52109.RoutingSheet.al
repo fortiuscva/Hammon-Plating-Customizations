@@ -87,6 +87,7 @@ report 52109 "HMP Routing Sheet"
                     }
                     dataitem("Item Attribute Value Mapping"; "Item Attribute Value Mapping")
                     {
+                        DataItemTableView = sorting("Table ID", "No.", "Item Attribute ID");
                         DataItemLinkReference = Item;
                         DataItemLink = "No." = field("No.");
                         column(No_; "No.")
@@ -101,9 +102,14 @@ report 52109 "HMP Routing Sheet"
                         {
 
                         }
+                        column(ItemAttributeName; ItemAttributeValue."Attribute Name")
+                        {
+
+                        }
                         trigger OnAfterGetRecord()
                         begin
                             ItemAttributeValue.Get("Item Attribute Value Mapping"."Item Attribute ID", "Item Attribute Value Mapping"."Item Attribute Value ID");
+                            ItemAttributeValue.CalcFields("Attribute Name");
                         end;
                     }
                     dataitem("Routing Header"; "Routing Header")
