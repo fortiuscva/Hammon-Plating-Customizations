@@ -3,7 +3,7 @@ report 52109 "HMP Routing Sheet"
     DefaultLayout = RDLC;
     RDLCLayout = './Reports/RoutingSheet.rdl';
     AdditionalSearchTerms = 'operations sheet,process structure sheet';
-    ApplicationArea = Manufacturing;
+    ApplicationArea = all;
     Caption = 'HMP Routing Sheet';
     UsageCategory = ReportsAndAnalysis;
 
@@ -106,10 +106,17 @@ report 52109 "HMP Routing Sheet"
                         {
 
                         }
+                        column(ItemAttributeValueSelectionUOM; ItemAttribute."Unit of Measure")
+                        {
+
+                        }
                         trigger OnAfterGetRecord()
                         begin
-                            ItemAttributeValue.Get("Item Attribute Value Mapping"."Item Attribute ID", "Item Attribute Value Mapping"."Item Attribute Value ID");
-                            ItemAttributeValue.CalcFields("Attribute Name");
+                            if ItemAttributeValue.Get("Item Attribute Value Mapping"."Item Attribute ID", "Item Attribute Value Mapping"."Item Attribute Value ID") then begin
+                                ItemAttributeValue.CalcFields("Attribute Name");
+
+                                if ItemAttribute.Get(ItemAttributeValue."Attribute ID") then;
+                            end;
                         end;
                     }
                     dataitem("Routing Header"; "Routing Header")
@@ -349,7 +356,7 @@ report 52109 "HMP Routing Sheet"
                     Caption = 'Options';
                     field(ProductionQuantity; ProductionQuantity)
                     {
-                        ApplicationArea = Manufacturing;
+                        ApplicationArea = all;
                         Caption = 'Production Quantity';
                         DecimalPlaces = 0 : 5;
                         MinValue = 0;
@@ -357,31 +364,31 @@ report 52109 "HMP Routing Sheet"
                     }
                     field(PrintComment; PrintComment)
                     {
-                        ApplicationArea = Manufacturing;
+                        ApplicationArea = all;
                         Caption = 'Comment';
                         ToolTip = 'Specifies whether to include comments that provide additional information about the operation. For example, comments might mention special conditions for completing the operation.';
                     }
                     field(PrintTool; PrintTool)
                     {
-                        ApplicationArea = Manufacturing;
+                        ApplicationArea = all;
                         Caption = 'Tools';
                         ToolTip = 'Specifies whether to include the tools that are required to complete the operation.';
                     }
                     field(PrintPersonnel; PrintPersonnel)
                     {
-                        ApplicationArea = Manufacturing;
+                        ApplicationArea = all;
                         Caption = 'Personnel';
                         ToolTip = 'Specifies whether to include the people to involve in the operation. For example, this is useful if the operation requires special knowledge or training.';
                     }
                     field(PrintQualityMeasures; PrintQualityMeasures)
                     {
-                        ApplicationArea = Manufacturing;
+                        ApplicationArea = all;
                         Caption = 'Quality Measures';
                         ToolTip = 'Specifies whether to include quality measures for the operation. For example, this is useful for quality control purposes.';
                     }
                     field(NumberOfCopies; NumberOfCopies)
                     {
-                        ApplicationArea = Manufacturing;
+                        ApplicationArea = all;
                         Caption = 'No. of Copies';
                         MinValue = 0;
                         ToolTip = 'Specifies how many copies of the document to print.';
@@ -406,6 +413,7 @@ report 52109 "HMP Routing Sheet"
 
     var
         ItemAttributeValue: Record "Item Attribute Value";
+        ItemAttribute: Record "Item Attribute";
         RoutinCommentLine: Record "Routing Comment Line";
         VersionMgt: Codeunit VersionManagement;
         CalendarMgt: Codeunit "Shop Calendar Management";
