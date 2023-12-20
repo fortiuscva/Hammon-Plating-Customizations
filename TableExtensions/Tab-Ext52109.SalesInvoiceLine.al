@@ -1,4 +1,4 @@
-tableextension 52106 "HMP Sales Shipment Line" extends "Sales Shipment Line"
+tableextension 52109 "HMP Sales Invoice Line" extends "Sales Invoice Line"
 {
     fields
     {
@@ -6,14 +6,14 @@ tableextension 52106 "HMP Sales Shipment Line" extends "Sales Shipment Line"
         {
             Caption = 'Sell-to Customer Name';
             FieldClass = FlowField;
-            CalcFormula = lookup("Sales Shipment Header"."Sell-to Customer Name" where("No." = field("Document No.")));
+            CalcFormula = lookup("Sales Invoice Header"."Sell-to Customer Name" where("No." = field("Document No.")));
             Editable = false;
         }
         field(52101; "HMP External Document No."; Code[35])
         {
             Caption = 'External Document No.';
             FieldClass = FlowField;
-            CalcFormula = lookup("Sales Shipment Header"."External Document No." where("No." = field("Document No.")));
+            CalcFormula = lookup("Sales Invoice Header"."External Document No." where("No." = field("Document No.")));
             Editable = false;
         }
 
