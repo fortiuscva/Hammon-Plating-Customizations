@@ -11,6 +11,328 @@
       <rd:DataSourceID>53223861-a5ec-4453-be3b-5302f083f9d6</rd:DataSourceID>
     </DataSource>
   </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="No_SalesShptHeader">
+          <DataField>No_SalesShptHeader</DataField>
+        </Field>
+        <Field Name="Invoice_Caption">
+          <DataField>Invoice_Caption</DataField>
+        </Field>
+        <Field Name="InvoiceNumberValue">
+          <DataField>InvoiceNumberValue</DataField>
+        </Field>
+        <Field Name="Terms_Caption">
+          <DataField>Terms_Caption</DataField>
+        </Field>
+        <Field Name="Payment_Terms_Code">
+          <DataField>Payment_Terms_Code</DataField>
+        </Field>
+        <Field Name="PTN_Caption">
+          <DataField>PTN_Caption</DataField>
+        </Field>
+        <Field Name="PTNValue">
+          <DataField>PTNValue</DataField>
+        </Field>
+        <Field Name="Tracking_Caption">
+          <DataField>Tracking_Caption</DataField>
+        </Field>
+        <Field Name="Package_Tracking_No_">
+          <DataField>Package_Tracking_No_</DataField>
+        </Field>
+        <Field Name="Sched_Date_Caption">
+          <DataField>Sched_Date_Caption</DataField>
+        </Field>
+        <Field Name="Shipment_Date">
+          <DataField>Shipment_Date</DataField>
+        </Field>
+        <Field Name="Completed_By_Caption">
+          <DataField>Completed_By_Caption</DataField>
+        </Field>
+        <Field Name="Checked_By_Caption">
+          <DataField>Checked_By_Caption</DataField>
+        </Field>
+        <Field Name="Print_Date_Caption">
+          <DataField>Print_Date_Caption</DataField>
+        </Field>
+        <Field Name="Verified_Caption">
+          <DataField>Verified_Caption</DataField>
+        </Field>
+        <Field Name="SSH_SellToContact">
+          <DataField>SSH_SellToContact</DataField>
+        </Field>
+        <Field Name="CompanyInfo2Picture">
+          <DataField>CompanyInfo2Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo1Picture">
+          <DataField>CompanyInfo1Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfoPicture">
+          <DataField>CompanyInfoPicture</DataField>
+        </Field>
+        <Field Name="CompanyAddress1">
+          <DataField>CompanyAddress1</DataField>
+        </Field>
+        <Field Name="CompanyAddress2">
+          <DataField>CompanyAddress2</DataField>
+        </Field>
+        <Field Name="CompanyAddress3">
+          <DataField>CompanyAddress3</DataField>
+        </Field>
+        <Field Name="CompanyAddress4">
+          <DataField>CompanyAddress4</DataField>
+        </Field>
+        <Field Name="CompanyAddress5">
+          <DataField>CompanyAddress5</DataField>
+        </Field>
+        <Field Name="CompanyAddress6">
+          <DataField>CompanyAddress6</DataField>
+        </Field>
+        <Field Name="CopyTxt">
+          <DataField>CopyTxt</DataField>
+        </Field>
+        <Field Name="BillToAddress1">
+          <DataField>BillToAddress1</DataField>
+        </Field>
+        <Field Name="BillToAddress2">
+          <DataField>BillToAddress2</DataField>
+        </Field>
+        <Field Name="BillToAddress3">
+          <DataField>BillToAddress3</DataField>
+        </Field>
+        <Field Name="BillToAddress4">
+          <DataField>BillToAddress4</DataField>
+        </Field>
+        <Field Name="BillToAddress5">
+          <DataField>BillToAddress5</DataField>
+        </Field>
+        <Field Name="BillToAddress6">
+          <DataField>BillToAddress6</DataField>
+        </Field>
+        <Field Name="BillToAddress7">
+          <DataField>BillToAddress7</DataField>
+        </Field>
+        <Field Name="ShipToAddress1">
+          <DataField>ShipToAddress1</DataField>
+        </Field>
+        <Field Name="ShipToAddress2">
+          <DataField>ShipToAddress2</DataField>
+        </Field>
+        <Field Name="ShipToAddress3">
+          <DataField>ShipToAddress3</DataField>
+        </Field>
+        <Field Name="ShipToAddress4">
+          <DataField>ShipToAddress4</DataField>
+        </Field>
+        <Field Name="ShipToAddress5">
+          <DataField>ShipToAddress5</DataField>
+        </Field>
+        <Field Name="ShipToAddress6">
+          <DataField>ShipToAddress6</DataField>
+        </Field>
+        <Field Name="ShipToAddress7">
+          <DataField>ShipToAddress7</DataField>
+        </Field>
+        <Field Name="BilltoCustNo_SalesShptHeader">
+          <DataField>BilltoCustNo_SalesShptHeader</DataField>
+        </Field>
+        <Field Name="ExtDocNo_SalesShptHeader">
+          <DataField>ExtDocNo_SalesShptHeader</DataField>
+        </Field>
+        <Field Name="SalesPurchPersonName">
+          <DataField>SalesPurchPersonName</DataField>
+        </Field>
+        <Field Name="ShptDate_SalesShptHeader">
+          <DataField>ShptDate_SalesShptHeader</DataField>
+        </Field>
+        <Field Name="CompanyAddress7">
+          <DataField>CompanyAddress7</DataField>
+        </Field>
+        <Field Name="CompanyAddress8">
+          <DataField>CompanyAddress8</DataField>
+        </Field>
+        <Field Name="BillToAddress8">
+          <DataField>BillToAddress8</DataField>
+        </Field>
+        <Field Name="ShipToAddress8">
+          <DataField>ShipToAddress8</DataField>
+        </Field>
+        <Field Name="ShipmentMethodDesc">
+          <DataField>ShipmentMethodDesc</DataField>
+        </Field>
+        <Field Name="OrderDate_SalesShptHeader">
+          <DataField>OrderDate_SalesShptHeader</DataField>
+        </Field>
+        <Field Name="OrderNo_SalesShptHeader">
+          <DataField>OrderNo_SalesShptHeader</DataField>
+        </Field>
+        <Field Name="PackageTrackingNoText">
+          <DataField>PackageTrackingNoText</DataField>
+        </Field>
+        <Field Name="ShippingAgentCodeText">
+          <DataField>ShippingAgentCodeText</DataField>
+        </Field>
+        <Field Name="ShippingAgentCodeLabel">
+          <DataField>ShippingAgentCodeLabel</DataField>
+        </Field>
+        <Field Name="PackageTrackingNoLabel">
+          <DataField>PackageTrackingNoLabel</DataField>
+        </Field>
+        <Field Name="TaxRegNo">
+          <DataField>TaxRegNo</DataField>
+        </Field>
+        <Field Name="TaxRegLabel">
+          <DataField>TaxRegLabel</DataField>
+        </Field>
+        <Field Name="CopyNo">
+          <DataField>CopyNo</DataField>
+        </Field>
+        <Field Name="PageLoopNumber">
+          <DataField>PageLoopNumber</DataField>
+        </Field>
+        <Field Name="BillCaption">
+          <DataField>BillCaption</DataField>
+        </Field>
+        <Field Name="ToCaption">
+          <DataField>ToCaption</DataField>
+        </Field>
+        <Field Name="CustomerIDCaption">
+          <DataField>CustomerIDCaption</DataField>
+        </Field>
+        <Field Name="PONumberCaption">
+          <DataField>PONumberCaption</DataField>
+        </Field>
+        <Field Name="SalesPersonCaption">
+          <DataField>SalesPersonCaption</DataField>
+        </Field>
+        <Field Name="ShipCaption">
+          <DataField>ShipCaption</DataField>
+        </Field>
+        <Field Name="ShipmentCaption">
+          <DataField>ShipmentCaption</DataField>
+        </Field>
+        <Field Name="ShipmentNumberCaption">
+          <DataField>ShipmentNumberCaption</DataField>
+        </Field>
+        <Field Name="ShipmentDateCaption">
+          <DataField>ShipmentDateCaption</DataField>
+        </Field>
+        <Field Name="PageCaption">
+          <DataField>PageCaption</DataField>
+        </Field>
+        <Field Name="ShipViaCaption">
+          <DataField>ShipViaCaption</DataField>
+        </Field>
+        <Field Name="PODateCaption">
+          <DataField>PODateCaption</DataField>
+        </Field>
+        <Field Name="OurOrderNoCaption">
+          <DataField>OurOrderNoCaption</DataField>
+        </Field>
+        <Field Name="SalesShptLineNumber">
+          <DataField>SalesShptLineNumber</DataField>
+        </Field>
+        <Field Name="TempSalesShptLineNo">
+          <DataField>TempSalesShptLineNo</DataField>
+        </Field>
+        <Field Name="TempSalesShipmentLine_PackageTrackingNo">
+          <DataField>TempSalesShipmentLine_PackageTrackingNo</DataField>
+        </Field>
+        <Field Name="TempSalesShptLineUOM">
+          <DataField>TempSalesShptLineUOM</DataField>
+        </Field>
+        <Field Name="TempSalesShptLineQy">
+          <DataField>TempSalesShptLineQy</DataField>
+        </Field>
+        <Field Name="TempSalesShptLineQyFormat">
+          <DataField>TempSalesShptLineQyFormat</DataField>
+        </Field>
+        <Field Name="OrderedQuantity">
+          <DataField>OrderedQuantity</DataField>
+        </Field>
+        <Field Name="OrderedQuantityFormat">
+          <DataField>OrderedQuantityFormat</DataField>
+        </Field>
+        <Field Name="BackOrderedQuantity">
+          <DataField>BackOrderedQuantity</DataField>
+        </Field>
+        <Field Name="BackOrderedQuantityFormat">
+          <DataField>BackOrderedQuantityFormat</DataField>
+        </Field>
+        <Field Name="TempSalesShptLineDesc">
+          <DataField>TempSalesShptLineDesc</DataField>
+        </Field>
+        <Field Name="PackageTrackingText">
+          <DataField>PackageTrackingText</DataField>
+        </Field>
+        <Field Name="AsmHeaderExists">
+          <DataField>AsmHeaderExists</DataField>
+        </Field>
+        <Field Name="PrintFooter">
+          <DataField>PrintFooter</DataField>
+        </Field>
+        <Field Name="ItemNoCaption">
+          <DataField>ItemNoCaption</DataField>
+        </Field>
+        <Field Name="UnitCaption">
+          <DataField>UnitCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="ShippedCaption">
+          <DataField>ShippedCaption</DataField>
+        </Field>
+        <Field Name="OrderedCaption">
+          <DataField>OrderedCaption</DataField>
+        </Field>
+        <Field Name="BackOrderedCaption">
+          <DataField>BackOrderedCaption</DataField>
+        </Field>
+        <Field Name="LineCount">
+          <DataField>LineCount</DataField>
+        </Field>
+        <Field Name="PostedAsmLineItemNo">
+          <DataField>PostedAsmLineItemNo</DataField>
+        </Field>
+        <Field Name="PostedAsmLineDescription">
+          <DataField>PostedAsmLineDescription</DataField>
+        </Field>
+        <Field Name="PostedAsmLineQuantity">
+          <DataField>PostedAsmLineQuantity</DataField>
+        </Field>
+        <Field Name="PostedAsmLineQuantityFormat">
+          <DataField>PostedAsmLineQuantityFormat</DataField>
+        </Field>
+        <Field Name="PostedAsmLineUOMCode">
+          <DataField>PostedAsmLineUOMCode</DataField>
+        </Field>
+        <Field Name="TempItemLedgEntry_ItemNo">
+          <DataField>TempItemLedgEntry_ItemNo</DataField>
+        </Field>
+        <Field Name="TempItemLedgEntry_LotNo">
+          <DataField>TempItemLedgEntry_LotNo</DataField>
+        </Field>
+        <Field Name="Tracking_Number">
+          <DataField>Tracking_Number</DataField>
+        </Field>
+        <Field Name="TempTrackingSpecBuffer_Qty">
+          <DataField>TempTrackingSpecBuffer_Qty</DataField>
+        </Field>
+        <Field Name="TempTrackingSpecBuffer_QtyFormat">
+          <DataField>TempTrackingSpecBuffer_QtyFormat</DataField>
+        </Field>
+        <Field Name="Lot_Serial_Caption">
+          <DataField>Lot_Serial_Caption</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2943,41 +3265,10 @@ Cstr(Fields!SSH_SellToContact.Value)
       <Width>18.08818cm</Width>
       <Page>
         <PageHeader>
-          <Height>8.9537cm</Height>
+          <Height>7.49524cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="ShipmentNumberCaption1">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>= Code.GetData(59,1)</Value>
-                      <Style>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>8pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.32518in</Top>
-              <Left>5.74992in</Left>
-              <Height>17.54136pt</Height>
-              <Width>1.21308in</Width>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
-                </Border>
-                <BottomBorder>
-                  <Style>None</Style>
-                </BottomBorder>
-              </Style>
-            </Textbox>
             <Textbox Name="ShipmentCaption1">
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -3000,40 +3291,7 @@ Cstr(Fields!SSH_SellToContact.Value)
               <Left>4.33333in</Left>
               <Height>19.41327pt</Height>
               <Width>2.62967in</Width>
-              <ZIndex>1</ZIndex>
               <Style />
-            </Textbox>
-            <Textbox Name="SalesShptHdrNo1">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Code.GetData(11,1)</Value>
-                      <Style>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.55631in</Top>
-              <Left>5.74992in</Left>
-              <Height>17pt</Height>
-              <Width>1.21309in</Width>
-              <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
-                </Border>
-                <TopBorder>
-                  <Style>None</Style>
-                </TopBorder>
-              </Style>
             </Textbox>
             <Textbox Name="CopyTxt1">
               <KeepTogether>true</KeepTogether>
@@ -3054,7 +3312,7 @@ Cstr(Fields!SSH_SellToContact.Value)
               <Top>0.86187in</Top>
               <Height>11pt</Height>
               <Width>1.1605in</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>1</ZIndex>
               <Visibility>
                 <Hidden>true</Hidden>
               </Visibility>
@@ -3071,7 +3329,7 @@ Cstr(Fields!SSH_SellToContact.Value)
               <Sizing>FitProportional</Sizing>
               <Height>20.12741mm</Height>
               <Width>60mm</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>2</ZIndex>
               <Visibility>
                 <Hidden>=iif((IsNothing(Fields!CompanyInfoPicture.Value)) =TRUE,TRUE,FALSE)</Hidden>
               </Visibility>
@@ -3244,11 +3502,11 @@ Cstr(Fields!SSH_SellToContact.Value)
                 </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Top>2.93515cm</Top>
+              <Top>3.45646cm</Top>
               <Left>0cm</Left>
               <Height>2.5015cm</Height>
               <Width>5.03136cm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -3433,11 +3691,11 @@ Cstr(Fields!SSH_SellToContact.Value)
                 </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Top>2.93359cm</Top>
+              <Top>3.4549cm</Top>
               <Left>6.02183cm</Left>
               <Height>2.50306cm</Height>
               <Width>5.503cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -3554,13 +3812,210 @@ Cstr(Fields!SSH_SellToContact.Value)
                     </Border>
                   </Style>
                 </Textbox>
+                <Textbox Name="ShipViaCaption1">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=Code.GetData(68,1)</Value>
+                          <Style>
+                            <FontFamily>Segoe UI</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>Bold</FontWeight>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>0.47859in</Top>
+                  <Height>11pt</Height>
+                  <Width>1.15752in</Width>
+                  <ZIndex>4</ZIndex>
+                  <Style>
+                    <PaddingLeft>2pt</PaddingLeft>
+                  </Style>
+                </Textbox>
+                <Textbox Name="TaxRegLabel1">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>= Code.GetData(56,1)</Value>
+                          <Style>
+                            <FontFamily>Segoe UI</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>Bold</FontWeight>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>0.32516in</Top>
+                  <Height>11pt</Height>
+                  <Width>1.15752in</Width>
+                  <ZIndex>5</ZIndex>
+                  <Style>
+                    <PaddingLeft>2pt</PaddingLeft>
+                  </Style>
+                </Textbox>
+                <Textbox Name="TaxRegNo1">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=Code.GetData(29,1)</Value>
+                          <Style>
+                            <FontFamily>Segoe UI</FontFamily>
+                            <FontSize>8pt</FontSize>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>0.32516in</Top>
+                  <Left>1.15752in</Left>
+                  <Height>11pt</Height>
+                  <Width>0.86498in</Width>
+                  <ZIndex>6</ZIndex>
+                  <Style />
+                </Textbox>
+                <Textbox Name="ShippingAgentCodeLabel1">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=Code.GetData(72,1)</Value>
+                          <Style>
+                            <FontFamily>Segoe UI</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>Bold</FontWeight>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>0.63582in</Top>
+                  <Height>11pt</Height>
+                  <Width>1.15752in</Width>
+                  <ZIndex>7</ZIndex>
+                  <Style>
+                    <PaddingLeft>2pt</PaddingLeft>
+                  </Style>
+                </Textbox>
+                <Textbox Name="ShippingAgentCodeText1">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=Code.GetData(73,1)</Value>
+                          <Style>
+                            <FontFamily>Segoe UI</FontFamily>
+                            <FontSize>8pt</FontSize>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>0.63582in</Top>
+                  <Left>1.15752in</Left>
+                  <Height>11pt</Height>
+                  <Width>0.86498in</Width>
+                  <ZIndex>8</ZIndex>
+                  <Style />
+                </Textbox>
+                <Textbox Name="ShipmentMethodDescription1">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=Code.GetData(69,1)</Value>
+                          <Style>
+                            <FontFamily>Segoe UI</FontFamily>
+                            <FontSize>8pt</FontSize>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>0.47859in</Top>
+                  <Left>1.15752in</Left>
+                  <Height>11pt</Height>
+                  <Width>0.86498in</Width>
+                  <ZIndex>9</ZIndex>
+                  <Style />
+                </Textbox>
+                <Textbox Name="PackageTrackingNoLabel1">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value EvaluationMode="Constant" />
+                          <Style>
+                            <FontFamily>Segoe UI</FontFamily>
+                            <FontSize>8pt</FontSize>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>0.80249in</Top>
+                  <Height>13.1729pt</Height>
+                  <Width>1.15752in</Width>
+                  <ZIndex>10</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                  <Style>
+                    <PaddingLeft>2pt</PaddingLeft>
+                  </Style>
+                </Textbox>
+                <Textbox Name="PackageTrackingNoText1">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value EvaluationMode="Constant" />
+                          <Style>
+                            <FontFamily>Segoe UI</FontFamily>
+                            <FontSize>8pt</FontSize>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>0.7886in</Top>
+                  <Left>1.15752in</Left>
+                  <Height>14.1729pt</Height>
+                  <Width>0.86499in</Width>
+                  <ZIndex>11</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                  <Style />
+                </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Top>2.93362cm</Top>
+              <Top>3.45493cm</Top>
               <Left>12.48606cm</Left>
-              <Height>2.48297cm</Height>
+              <Height>2.50304cm</Height>
               <Width>5.20002cm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -3589,6 +4044,7 @@ Cstr(Fields!SSH_SellToContact.Value)
                       </Style>
                     </Paragraph>
                   </Paragraphs>
+                  <Top>0.17991in</Top>
                   <Height>11pt</Height>
                   <Width>1.01327in</Width>
                   <Style>
@@ -3613,7 +4069,7 @@ Cstr(Fields!SSH_SellToContact.Value)
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.46405in</Top>
+                  <Top>0.64396in</Top>
                   <Height>11pt</Height>
                   <Width>0.94383in</Width>
                   <ZIndex>1</ZIndex>
@@ -3640,7 +4096,7 @@ Cstr(Fields!SSH_SellToContact.Value)
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.30682in</Top>
+                  <Top>0.48673in</Top>
                   <Height>11pt</Height>
                   <Width>1.01327in</Width>
                   <ZIndex>2</ZIndex>
@@ -3667,7 +4123,7 @@ Cstr(Fields!SSH_SellToContact.Value)
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.15278in</Top>
+                  <Top>0.33269in</Top>
                   <Height>11pt</Height>
                   <Width>1.01327in</Width>
                   <ZIndex>3</ZIndex>
@@ -3693,6 +4149,7 @@ Cstr(Fields!SSH_SellToContact.Value)
                       </Style>
                     </Paragraph>
                   </Paragraphs>
+                  <Top>0.17991in</Top>
                   <Left>1.01327in</Left>
                   <Height>11pt</Height>
                   <Width>0.96758in</Width>
@@ -3718,7 +4175,7 @@ Cstr(Fields!SSH_SellToContact.Value)
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.46405in</Top>
+                  <Top>0.64396in</Top>
                   <Left>0.94383in</Left>
                   <Height>11pt</Height>
                   <Width>1.03702in</Width>
@@ -3743,7 +4200,7 @@ Cstr(Fields!SSH_SellToContact.Value)
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.30682in</Top>
+                  <Top>0.48673in</Top>
                   <Left>1.01327in</Left>
                   <Height>11pt</Height>
                   <Width>0.96758in</Width>
@@ -3768,36 +4225,20 @@ Cstr(Fields!SSH_SellToContact.Value)
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.15278in</Top>
+                  <Top>0.33269in</Top>
                   <Left>1.01327in</Left>
                   <Height>11pt</Height>
                   <Width>0.96758in</Width>
                   <ZIndex>7</ZIndex>
                   <Style />
                 </Textbox>
-              </ReportItems>
-              <KeepTogether>true</KeepTogether>
-              <Top>6.0278cm</Top>
-              <Left>0cm</Left>
-              <Height>1.56674cm</Height>
-              <Width>5.03136cm</Width>
-              <ZIndex>8</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
-                </Border>
-                <BackgroundColor>LightGrey</BackgroundColor>
-              </Style>
-            </Rectangle>
-            <Rectangle Name="Rectangle5">
-              <ReportItems>
-                <Textbox Name="ShipViaCaption1">
+                <Textbox Name="ShipmentNumberCaption1">
                   <KeepTogether>true</KeepTogether>
                   <Paragraphs>
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>=Code.GetData(68,1)</Value>
+                          <Value>= Code.GetData(59,1)</Value>
                           <Style>
                             <FontFamily>Segoe UI</FontFamily>
                             <FontSize>8pt</FontSize>
@@ -3805,197 +4246,58 @@ Cstr(Fields!SSH_SellToContact.Value)
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Left</TextAlign>
+                      </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.15343in</Top>
-                  <Left>0.00001in</Left>
+                  <Top>0.02713in</Top>
                   <Height>11pt</Height>
-                  <Width>0.94383in</Width>
+                  <Width>1.01327in</Width>
+                  <ZIndex>8</ZIndex>
                   <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
                     <PaddingLeft>2pt</PaddingLeft>
                   </Style>
                 </Textbox>
-                <Textbox Name="TaxRegLabel1">
+                <Textbox Name="SalesShptHdrNo1">
                   <KeepTogether>true</KeepTogether>
                   <Paragraphs>
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>= Code.GetData(56,1)</Value>
+                          <Value>=Code.GetData(11,1)</Value>
                           <Style>
                             <FontFamily>Segoe UI</FontFamily>
                             <FontSize>8pt</FontSize>
-                            <FontWeight>Bold</FontWeight>
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Left</TextAlign>
+                      </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Left>0.00001in</Left>
-                  <Height>11pt</Height>
-                  <Width>0.94383in</Width>
-                  <ZIndex>1</ZIndex>
+                  <Top>0.01389in</Top>
+                  <Left>1.01327in</Left>
+                  <Height>11.95326pt</Height>
+                  <Width>0.9398in</Width>
+                  <ZIndex>9</ZIndex>
                   <Style>
-                    <PaddingLeft>2pt</PaddingLeft>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
                   </Style>
-                </Textbox>
-                <Textbox Name="TaxRegNo1">
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Code.GetData(29,1)</Value>
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <Left>0.94384in</Left>
-                  <Height>11pt</Height>
-                  <Width>1.03702in</Width>
-                  <ZIndex>2</ZIndex>
-                  <Style />
-                </Textbox>
-                <Textbox Name="PackageTrackingNoLabel1">
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value EvaluationMode="Constant" />
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>0.474in</Top>
-                  <Left>0.00001in</Left>
-                  <Height>11pt</Height>
-                  <Width>0.94383in</Width>
-                  <ZIndex>3</ZIndex>
-                  <Visibility>
-                    <Hidden>true</Hidden>
-                  </Visibility>
-                  <Style>
-                    <PaddingLeft>2pt</PaddingLeft>
-                  </Style>
-                </Textbox>
-                <Textbox Name="ShippingAgentCodeLabel1">
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Code.GetData(72,1)</Value>
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>0.31066in</Top>
-                  <Left>0.00001in</Left>
-                  <Height>11pt</Height>
-                  <Width>0.94383in</Width>
-                  <ZIndex>4</ZIndex>
-                  <Style>
-                    <PaddingLeft>2pt</PaddingLeft>
-                  </Style>
-                </Textbox>
-                <Textbox Name="ShippingAgentCodeText1">
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Code.GetData(73,1)</Value>
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>0.31066in</Top>
-                  <Left>0.94384in</Left>
-                  <Height>11pt</Height>
-                  <Width>1.03702in</Width>
-                  <ZIndex>5</ZIndex>
-                  <Style />
-                </Textbox>
-                <Textbox Name="PackageTrackingNoText1">
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value EvaluationMode="Constant" />
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>0.474in</Top>
-                  <Left>0.94384in</Left>
-                  <Height>11pt</Height>
-                  <Width>1.03702in</Width>
-                  <ZIndex>6</ZIndex>
-                  <Visibility>
-                    <Hidden>true</Hidden>
-                  </Visibility>
-                  <Style />
-                </Textbox>
-                <Textbox Name="ShipmentMethodDescription1">
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Code.GetData(69,1)</Value>
-                          <Style>
-                            <FontFamily>Segoe UI</FontFamily>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>0.15343in</Top>
-                  <Left>0.94384in</Left>
-                  <Height>11pt</Height>
-                  <Width>1.03702in</Width>
-                  <ZIndex>7</ZIndex>
-                  <Style />
                 </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Top>6.0278cm</Top>
+              <Top>0.79069cm</Top>
               <Left>12.59186cm</Left>
-              <Height>1.63896cm</Height>
-              <Width>5.19999cm</Width>
-              <ZIndex>9</ZIndex>
+              <Height>2.19573cm</Height>
+              <Width>5.03136cm</Width>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -4029,11 +4331,11 @@ Cstr(Fields!SSH_SellToContact.Value)
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox10</rd:DefaultName>
-              <Top>7.77093cm</Top>
+              <Top>6.70474cm</Top>
               <Left>0cm</Left>
               <Height>0.6cm</Height>
               <Width>5.03136cm</Width>
-              <ZIndex>10</ZIndex>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4250,6 +4552,12 @@ Cstr(Fields!SSH_SellToContact.Value)
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -4373,326 +4681,4 @@ Shared PictureData3 as Object
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>f6106c11-0fa0-4b0c-a5eb-124a038a0398</rd:ReportID>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Fields>
-        <Field Name="No_SalesShptHeader">
-          <DataField>No_SalesShptHeader</DataField>
-        </Field>
-        <Field Name="Invoice_Caption">
-          <DataField>Invoice_Caption</DataField>
-        </Field>
-        <Field Name="InvoiceNumberValue">
-          <DataField>InvoiceNumberValue</DataField>
-        </Field>
-        <Field Name="Terms_Caption">
-          <DataField>Terms_Caption</DataField>
-        </Field>
-        <Field Name="Payment_Terms_Code">
-          <DataField>Payment_Terms_Code</DataField>
-        </Field>
-        <Field Name="PTN_Caption">
-          <DataField>PTN_Caption</DataField>
-        </Field>
-        <Field Name="PTNValue">
-          <DataField>PTNValue</DataField>
-        </Field>
-        <Field Name="Tracking_Caption">
-          <DataField>Tracking_Caption</DataField>
-        </Field>
-        <Field Name="Package_Tracking_No_">
-          <DataField>Package_Tracking_No_</DataField>
-        </Field>
-        <Field Name="Sched_Date_Caption">
-          <DataField>Sched_Date_Caption</DataField>
-        </Field>
-        <Field Name="Shipment_Date">
-          <DataField>Shipment_Date</DataField>
-        </Field>
-        <Field Name="Completed_By_Caption">
-          <DataField>Completed_By_Caption</DataField>
-        </Field>
-        <Field Name="Checked_By_Caption">
-          <DataField>Checked_By_Caption</DataField>
-        </Field>
-        <Field Name="Print_Date_Caption">
-          <DataField>Print_Date_Caption</DataField>
-        </Field>
-        <Field Name="Verified_Caption">
-          <DataField>Verified_Caption</DataField>
-        </Field>
-        <Field Name="SSH_SellToContact">
-          <DataField>SSH_SellToContact</DataField>
-        </Field>
-        <Field Name="CompanyInfo2Picture">
-          <DataField>CompanyInfo2Picture</DataField>
-        </Field>
-        <Field Name="CompanyInfo1Picture">
-          <DataField>CompanyInfo1Picture</DataField>
-        </Field>
-        <Field Name="CompanyInfoPicture">
-          <DataField>CompanyInfoPicture</DataField>
-        </Field>
-        <Field Name="CompanyAddress1">
-          <DataField>CompanyAddress1</DataField>
-        </Field>
-        <Field Name="CompanyAddress2">
-          <DataField>CompanyAddress2</DataField>
-        </Field>
-        <Field Name="CompanyAddress3">
-          <DataField>CompanyAddress3</DataField>
-        </Field>
-        <Field Name="CompanyAddress4">
-          <DataField>CompanyAddress4</DataField>
-        </Field>
-        <Field Name="CompanyAddress5">
-          <DataField>CompanyAddress5</DataField>
-        </Field>
-        <Field Name="CompanyAddress6">
-          <DataField>CompanyAddress6</DataField>
-        </Field>
-        <Field Name="CopyTxt">
-          <DataField>CopyTxt</DataField>
-        </Field>
-        <Field Name="BillToAddress1">
-          <DataField>BillToAddress1</DataField>
-        </Field>
-        <Field Name="BillToAddress2">
-          <DataField>BillToAddress2</DataField>
-        </Field>
-        <Field Name="BillToAddress3">
-          <DataField>BillToAddress3</DataField>
-        </Field>
-        <Field Name="BillToAddress4">
-          <DataField>BillToAddress4</DataField>
-        </Field>
-        <Field Name="BillToAddress5">
-          <DataField>BillToAddress5</DataField>
-        </Field>
-        <Field Name="BillToAddress6">
-          <DataField>BillToAddress6</DataField>
-        </Field>
-        <Field Name="BillToAddress7">
-          <DataField>BillToAddress7</DataField>
-        </Field>
-        <Field Name="ShipToAddress1">
-          <DataField>ShipToAddress1</DataField>
-        </Field>
-        <Field Name="ShipToAddress2">
-          <DataField>ShipToAddress2</DataField>
-        </Field>
-        <Field Name="ShipToAddress3">
-          <DataField>ShipToAddress3</DataField>
-        </Field>
-        <Field Name="ShipToAddress4">
-          <DataField>ShipToAddress4</DataField>
-        </Field>
-        <Field Name="ShipToAddress5">
-          <DataField>ShipToAddress5</DataField>
-        </Field>
-        <Field Name="ShipToAddress6">
-          <DataField>ShipToAddress6</DataField>
-        </Field>
-        <Field Name="ShipToAddress7">
-          <DataField>ShipToAddress7</DataField>
-        </Field>
-        <Field Name="BilltoCustNo_SalesShptHeader">
-          <DataField>BilltoCustNo_SalesShptHeader</DataField>
-        </Field>
-        <Field Name="ExtDocNo_SalesShptHeader">
-          <DataField>ExtDocNo_SalesShptHeader</DataField>
-        </Field>
-        <Field Name="SalesPurchPersonName">
-          <DataField>SalesPurchPersonName</DataField>
-        </Field>
-        <Field Name="ShptDate_SalesShptHeader">
-          <DataField>ShptDate_SalesShptHeader</DataField>
-        </Field>
-        <Field Name="CompanyAddress7">
-          <DataField>CompanyAddress7</DataField>
-        </Field>
-        <Field Name="CompanyAddress8">
-          <DataField>CompanyAddress8</DataField>
-        </Field>
-        <Field Name="BillToAddress8">
-          <DataField>BillToAddress8</DataField>
-        </Field>
-        <Field Name="ShipToAddress8">
-          <DataField>ShipToAddress8</DataField>
-        </Field>
-        <Field Name="ShipmentMethodDesc">
-          <DataField>ShipmentMethodDesc</DataField>
-        </Field>
-        <Field Name="OrderDate_SalesShptHeader">
-          <DataField>OrderDate_SalesShptHeader</DataField>
-        </Field>
-        <Field Name="OrderNo_SalesShptHeader">
-          <DataField>OrderNo_SalesShptHeader</DataField>
-        </Field>
-        <Field Name="PackageTrackingNoText">
-          <DataField>PackageTrackingNoText</DataField>
-        </Field>
-        <Field Name="ShippingAgentCodeText">
-          <DataField>ShippingAgentCodeText</DataField>
-        </Field>
-        <Field Name="ShippingAgentCodeLabel">
-          <DataField>ShippingAgentCodeLabel</DataField>
-        </Field>
-        <Field Name="PackageTrackingNoLabel">
-          <DataField>PackageTrackingNoLabel</DataField>
-        </Field>
-        <Field Name="TaxRegNo">
-          <DataField>TaxRegNo</DataField>
-        </Field>
-        <Field Name="TaxRegLabel">
-          <DataField>TaxRegLabel</DataField>
-        </Field>
-        <Field Name="CopyNo">
-          <DataField>CopyNo</DataField>
-        </Field>
-        <Field Name="PageLoopNumber">
-          <DataField>PageLoopNumber</DataField>
-        </Field>
-        <Field Name="BillCaption">
-          <DataField>BillCaption</DataField>
-        </Field>
-        <Field Name="ToCaption">
-          <DataField>ToCaption</DataField>
-        </Field>
-        <Field Name="CustomerIDCaption">
-          <DataField>CustomerIDCaption</DataField>
-        </Field>
-        <Field Name="PONumberCaption">
-          <DataField>PONumberCaption</DataField>
-        </Field>
-        <Field Name="SalesPersonCaption">
-          <DataField>SalesPersonCaption</DataField>
-        </Field>
-        <Field Name="ShipCaption">
-          <DataField>ShipCaption</DataField>
-        </Field>
-        <Field Name="ShipmentCaption">
-          <DataField>ShipmentCaption</DataField>
-        </Field>
-        <Field Name="ShipmentNumberCaption">
-          <DataField>ShipmentNumberCaption</DataField>
-        </Field>
-        <Field Name="ShipmentDateCaption">
-          <DataField>ShipmentDateCaption</DataField>
-        </Field>
-        <Field Name="PageCaption">
-          <DataField>PageCaption</DataField>
-        </Field>
-        <Field Name="ShipViaCaption">
-          <DataField>ShipViaCaption</DataField>
-        </Field>
-        <Field Name="PODateCaption">
-          <DataField>PODateCaption</DataField>
-        </Field>
-        <Field Name="OurOrderNoCaption">
-          <DataField>OurOrderNoCaption</DataField>
-        </Field>
-        <Field Name="SalesShptLineNumber">
-          <DataField>SalesShptLineNumber</DataField>
-        </Field>
-        <Field Name="TempSalesShptLineNo">
-          <DataField>TempSalesShptLineNo</DataField>
-        </Field>
-        <Field Name="TempSalesShipmentLine_PackageTrackingNo">
-          <DataField>TempSalesShipmentLine_PackageTrackingNo</DataField>
-        </Field>
-        <Field Name="TempSalesShptLineUOM">
-          <DataField>TempSalesShptLineUOM</DataField>
-        </Field>
-        <Field Name="TempSalesShptLineQy">
-          <DataField>TempSalesShptLineQy</DataField>
-        </Field>
-        <Field Name="TempSalesShptLineQyFormat">
-          <DataField>TempSalesShptLineQyFormat</DataField>
-        </Field>
-        <Field Name="OrderedQuantity">
-          <DataField>OrderedQuantity</DataField>
-        </Field>
-        <Field Name="OrderedQuantityFormat">
-          <DataField>OrderedQuantityFormat</DataField>
-        </Field>
-        <Field Name="BackOrderedQuantity">
-          <DataField>BackOrderedQuantity</DataField>
-        </Field>
-        <Field Name="BackOrderedQuantityFormat">
-          <DataField>BackOrderedQuantityFormat</DataField>
-        </Field>
-        <Field Name="TempSalesShptLineDesc">
-          <DataField>TempSalesShptLineDesc</DataField>
-        </Field>
-        <Field Name="PackageTrackingText">
-          <DataField>PackageTrackingText</DataField>
-        </Field>
-        <Field Name="AsmHeaderExists">
-          <DataField>AsmHeaderExists</DataField>
-        </Field>
-        <Field Name="PrintFooter">
-          <DataField>PrintFooter</DataField>
-        </Field>
-        <Field Name="ItemNoCaption">
-          <DataField>ItemNoCaption</DataField>
-        </Field>
-        <Field Name="UnitCaption">
-          <DataField>UnitCaption</DataField>
-        </Field>
-        <Field Name="DescriptionCaption">
-          <DataField>DescriptionCaption</DataField>
-        </Field>
-        <Field Name="ShippedCaption">
-          <DataField>ShippedCaption</DataField>
-        </Field>
-        <Field Name="OrderedCaption">
-          <DataField>OrderedCaption</DataField>
-        </Field>
-        <Field Name="BackOrderedCaption">
-          <DataField>BackOrderedCaption</DataField>
-        </Field>
-        <Field Name="LineCount">
-          <DataField>LineCount</DataField>
-        </Field>
-        <Field Name="PostedAsmLineItemNo">
-          <DataField>PostedAsmLineItemNo</DataField>
-        </Field>
-        <Field Name="PostedAsmLineDescription">
-          <DataField>PostedAsmLineDescription</DataField>
-        </Field>
-        <Field Name="PostedAsmLineQuantity">
-          <DataField>PostedAsmLineQuantity</DataField>
-        </Field>
-        <Field Name="PostedAsmLineQuantityFormat">
-          <DataField>PostedAsmLineQuantityFormat</DataField>
-        </Field>
-        <Field Name="PostedAsmLineUOMCode">
-          <DataField>PostedAsmLineUOMCode</DataField>
-        </Field>
-        <Field Name="TempItemLedgEntry_ItemNo">
-          <DataField>TempItemLedgEntry_ItemNo</DataField>
-        </Field>
-        <Field Name="TempItemLedgEntry_LotNo">
-          <DataField>TempItemLedgEntry_LotNo</DataField>
-        </Field>
-        <Field Name="Tracking_Number">
-          <DataField>Tracking_Number</DataField>
-        </Field>
-        <Field Name="TempTrackingSpecBuffer_Qty">
-          <DataField>TempTrackingSpecBuffer_Qty</DataField>
-        </Field>
-        <Field Name="TempTrackingSpecBuffer_QtyFormat">
-          <DataField>TempTrackingSpecBuffer_QtyFormat</DataField>
-        </Field>
-        <Field Name="Lot_Serial_Caption">
-          <DataField>Lot_Serial_Caption</DataField>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-    </DataSet>
-  </DataSets>
 </Report>
