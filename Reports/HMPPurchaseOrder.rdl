@@ -167,7 +167,7 @@ Cstr(Fields!TaxIdentTypeCaption.Value) + Chr(177) +
 CStr(Fields!VendorOrderNo_Lbl.Value) + Chr(177) +
 CStr(Fields!VendorInvoiceNo_Lbl.Value) + Chr(177) +
 CStr(Fields!VendorOrderNo.Value) + Chr(177) +
-Cstr(fields!VendorInvoiceNo.Value)</Value>
+Cstr(fields!VendorInvoiceNo.Value) + Chr(177) + Cstr(Fields!Shipment_Method_Code.Value)</Value>
                                   <Style>
                                     <Color>Red</Color>
                                   </Style>
@@ -2162,7 +2162,7 @@ First(Fields!LineAmtTaxAmtInvDiscountAmtFormat.Value)</Value>
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value EvaluationMode="Constant" />
+                          <Value>=Code.GetData(55,1)</Value>
                           <Style>
                             <FontFamily>Segoe UI</FontFamily>
                             <FontSize>8pt</FontSize>
