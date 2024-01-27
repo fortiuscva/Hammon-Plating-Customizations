@@ -14,13 +14,17 @@ pageextension 52107 "HMP Released Production Order" extends "Released Production
                 var
                     RoutingSheet: Report "HMP Routing Sheet";
                     ProdOrderLineRecLcl: Record "Prod. Order Line";
+                    ItemRecLcl: Record Item;
                 begin
                     ProdOrderLineRecLcl.Reset();
                     ProdOrderLineRecLcl.SetRange(Status, rec.Status);
                     ProdOrderLineRecLcl.SetRange("Prod. Order No.", rec."No.");
                     if ProdOrderLineRecLcl.FindFirst() then begin
+                        ItemRecLcl.SetRange("No.", ProdOrderLineRecLcl."Item No.");
+                        ItemRecLcl.FindFirst();
+                        RoutingSheet.SetTableView(ItemRecLcl);
                         RoutingSheet.SetProductionOrder(ProdOrderLineRecLcl);
-                        RoutingSheet.RunModal();
+                        RoutingSheet.Run();
                     end;
                 end;
             }

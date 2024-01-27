@@ -372,11 +372,6 @@ report 52109 "HMP Routing Sheet"
                     ActiveVersionText := '';
             end;
 
-            trigger OnPreDataItem()
-            begin
-                if ProdOrderLineRecGbl."Item No." <> '' then
-                    SetRange("No.", ProdOrderLineRecGbl."Item No.");
-            end;
         }
     }
 
