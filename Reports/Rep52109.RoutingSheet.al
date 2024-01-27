@@ -29,6 +29,13 @@ report 52109 "HMP Routing Sheet"
             column(PrintQualityMeasures; PrintQualityMeasures)
             {
             }
+            column(BarcodeString; BarcodeString)
+            {
+            }
+            column(NoProdOrderRecGbl; ProdOrderLineRecGbl."Prod. Order No.")
+            {
+
+            }
             dataitem(Counter1; "Integer")
             {
                 DataItemTableView = SORTING(Number);
@@ -84,6 +91,18 @@ report 52109 "HMP Routing Sheet"
                     }
                     column(DescriptionCaption; DescriptionCaptionLbl)
                     {
+                    }
+                    column(ProductionOrderCaption; ProductionOrderCaptionLbl)
+                    {
+
+                    }
+                    column(SalesOrderCaption; SalesOrderCaptionLbl)
+                    {
+
+                    }
+                    column(CustomerCaption; CustomerCaptionLbl)
+                    {
+
                     }
                     dataitem("Item Attribute Value Mapping"; "Item Attribute Value Mapping")
                     {
@@ -319,6 +338,10 @@ report 52109 "HMP Routing Sheet"
                 end;
 
                 trigger OnPreDataItem()
+                var
+
+                    BarcodeSymbology: Enum "Barcode Symbology";
+                    BarcodeFontProvider: Interface "Barcode Font Provider";
                 begin
                     if NumberOfCopies = 0 then
                         LoopNo := 1
@@ -326,6 +349,13 @@ report 52109 "HMP Routing Sheet"
                         LoopNo := 1 + NumberOfCopies;
                     CopyNo := 0;
                     OutputNo := 1;
+
+                    BarcodeFontProvider := Enum::"Barcode Font Provider"::IDAutomation1D;
+                    BarcodeSymbology := Enum::"Barcode Symbology"::"Code39";
+                    BarcodeFontProvider.ValidateInput(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
+                    BarcodeString := BarcodeFontProvider.EncodeFont(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
+
+
                 end;
             }
             trigger OnAfterGetRecord()
@@ -340,6 +370,12 @@ report 52109 "HMP Routing Sheet"
                     ActiveVersionText := Text001
                 else
                     ActiveVersionText := '';
+            end;
+
+            trigger OnPreDataItem()
+            begin
+                if ProdOrderLineRecGbl."Item No." <> '' then
+                    SetRange("No.", ProdOrderLineRecGbl."Item No.");
             end;
         }
     }
@@ -418,6 +454,8 @@ report 52109 "HMP Routing Sheet"
         VersionMgt: Codeunit VersionManagement;
         CalendarMgt: Codeunit "Shop Calendar Management";
         UOMMgt: Codeunit "Unit of Measure Management";
+        ProdOrderLineRecGbl: Record "Prod. Order Line";
+        BarcodeString: Text;
         NumberOfCopies: Integer;
         CopyNo: Integer;
         CopyText: Text[30];
@@ -442,5 +480,13 @@ report 52109 "HMP Routing Sheet"
         TotalTimeCaptionLbl: Label 'Total Time';
         RtngLnRunTimeUOMCodeCptnLbl: Label 'Time Unit';
         DescriptionCaptionLbl: label 'Description';
+        ProductionOrderCaptionLbl: Label 'Production Order #:';
+        SalesOrderCaptionLbl: Label 'Sales Order #:';
+        CustomerCaptionLbl: Label 'Customer:';
+
+    procedure SetProductionOrder(ProductionOrderLine: Record "Prod. Order Line")
+    begin
+        ProdOrderLineRecGbl := ProductionOrderLine;
+    end;
 }
 
