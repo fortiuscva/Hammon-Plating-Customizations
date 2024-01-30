@@ -350,10 +350,12 @@ report 52109 "HMP Routing Sheet"
                     CopyNo := 0;
                     OutputNo := 1;
 
-                    BarcodeFontProvider := Enum::"Barcode Font Provider"::IDAutomation1D;
-                    BarcodeSymbology := Enum::"Barcode Symbology"::"Code39";
-                    BarcodeFontProvider.ValidateInput(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
-                    BarcodeString := BarcodeFontProvider.EncodeFont(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
+                    if ProdOrderLineRecGbl."Prod. Order No." <> '' then begin
+                        BarcodeFontProvider := Enum::"Barcode Font Provider"::IDAutomation1D;
+                        BarcodeSymbology := Enum::"Barcode Symbology"::"Code39";
+                        BarcodeFontProvider.ValidateInput(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
+                        BarcodeString := BarcodeFontProvider.EncodeFont(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
+                    end;
 
 
                 end;
