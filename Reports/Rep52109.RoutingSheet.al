@@ -38,7 +38,7 @@ report 52109 "HMP Routing Sheet"
             }
             column(SalesOrderNo; SalesHeaderRecGbl."No.")
             { }
-            column(CustomerNo; SalesHeaderRecGbl."Sell-to Customer No.")
+            column(CustomerNo; SalesHeaderRecGbl."Sell-to Customer Name")
             { }
             dataitem(Counter1; "Integer")
             {
