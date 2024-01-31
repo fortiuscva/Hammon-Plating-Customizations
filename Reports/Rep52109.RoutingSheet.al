@@ -36,6 +36,10 @@ report 52109 "HMP Routing Sheet"
             {
 
             }
+            column(SalesOrderNo; SalesHeaderRecGbl."No.")
+            { }
+            column(CustomerNo; SalesHeaderRecGbl."Sell-to Customer No.")
+            { }
             dataitem(Counter1; "Integer")
             {
                 DataItemTableView = SORTING(Number);
@@ -355,9 +359,16 @@ report 52109 "HMP Routing Sheet"
                         BarcodeSymbology := Enum::"Barcode Symbology"::"Code39";
                         BarcodeFontProvider.ValidateInput(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
                         BarcodeString := BarcodeFontProvider.EncodeFont(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
+
+                        ReservationEntryRecGbl.Reset();
+                        ReservationEntryRecGbl.SetRange("Source Type", Database::"Prod. Order Line");
+                        ReservationEntryRecGbl.SetRange("Source ID", ProdOrderLineRecGbl."Prod. Order No.");
+                        ReservationEntryRecGbl.SetRange(Positive, true);
+                        if ReservationEntryRecGbl.FindFirst() then
+                            if ReservationEntry2RecGbl.Get(ReservationEntryRecGbl."Entry No.") then
+                                if SalesHeaderRecGbl.get(SalesHeaderRecGbl."Document Type"::Order, ReservationEntry2RecGbl."Source ID") then;
+
                     end;
-
-
                 end;
             }
             trigger OnAfterGetRecord()
@@ -452,6 +463,9 @@ report 52109 "HMP Routing Sheet"
         CalendarMgt: Codeunit "Shop Calendar Management";
         UOMMgt: Codeunit "Unit of Measure Management";
         ProdOrderLineRecGbl: Record "Prod. Order Line";
+        ReservationEntryRecGbl: Record "Reservation Entry";
+        ReservationEntry2RecGbl: Record "Reservation Entry";
+        SalesHeaderRecGbl: Record "Sales Header";
         BarcodeString: Text;
         NumberOfCopies: Integer;
         CopyNo: Integer;

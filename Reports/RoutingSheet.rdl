@@ -1583,7 +1583,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value />
+                                          <Value>=Fields!SalesOrderNo.Value</Value>
                                           <Style>
                                             <FontSize>8pt</FontSize>
                                           </Style>
@@ -1612,7 +1612,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value />
+                                          <Value>=Fields!CustomerNo.Value</Value>
                                           <Style>
                                             <FontSize>8pt</FontSize>
                                           </Style>
@@ -4450,6 +4450,12 @@ End Function
         </Field>
         <Field Name="NoProdOrderRecGbl">
           <DataField>NoProdOrderRecGbl</DataField>
+        </Field>
+        <Field Name="SalesOrderNo">
+          <DataField>SalesOrderNo</DataField>
+        </Field>
+        <Field Name="CustomerNo">
+          <DataField>CustomerNo</DataField>
         </Field>
         <Field Name="CompanyName">
           <DataField>CompanyName</DataField>
