@@ -62,7 +62,8 @@ report 52109 "HMP Routing Sheet"
                     column(No01_Item; Item."No.")
                     {
                     }
-                    column(Desc_Item; Item.Description)
+                    //column(Desc_Item; Item.Description)
+                    column(Desc_Item; ProductionOrderRecGbl.Description)
                     {
                     }
                     column(ProductionQuantity; ProductionQuantity)
@@ -453,6 +454,19 @@ report 52109 "HMP Routing Sheet"
     trigger OnInitReport()
     begin
         ProductionQuantity := 1;
+        PrintComment := true;
+
+        if ProdOrderLineRecGbl."Prod. Order No." <> '' then begin
+            ProductionOrderRecGbl.get(ProdOrderLineRecGbl.Status, ProdOrderLineRecGbl."Prod. Order No.");
+            ReservationEntryRecGbl.Reset();
+            ReservationEntryRecGbl.SetRange("Source Type", Database::"Prod. Order Line");
+            ReservationEntryRecGbl.SetRange("Source ID", ProdOrderLineRecGbl."Prod. Order No.");
+            ReservationEntryRecGbl.SetRange(Positive, true);
+            if ReservationEntryRecGbl.FindFirst() then
+                if ReservationEntry2RecGbl.Get(ReservationEntryRecGbl."Entry No.") then
+                    if SalesHeaderRecGbl.get(SalesHeaderRecGbl."Document Type"::Order, ReservationEntry2RecGbl."Source ID") then;
+            ProductionQuantity := ProdOrderLineRecGbl."Remaining Quantity";
+        end;
     end;
 
     var
@@ -480,6 +494,10 @@ report 52109 "HMP Routing Sheet"
         TotalTime: Decimal;
         ActiveVersionCode: Code[20];
         RoutingComment: Text;
+        ProdDesc: Text;
+        ProdDesc2: Text;
+        ProductionOrderRecGbl: Record "Production Order";
+
 
         Text000: Label 'Copy number:';
         Text001: Label 'Active Version';
