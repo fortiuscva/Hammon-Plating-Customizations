@@ -34,7 +34,6 @@ report 52109 "HMP Routing Sheet"
             }
             column(NoProdOrderRecGbl; ProdOrderLineRecGbl."Prod. Order No.")
             {
-
             }
             column(SalesOrderNo; SalesHeaderRecGbl."No.")
             { }
@@ -64,6 +63,9 @@ report 52109 "HMP Routing Sheet"
                     }
                     //column(Desc_Item; Item.Description)
                     column(Desc_Item; ProductionOrderRecGbl.Description)
+                    {
+                    }
+                    column(Desc2_Item; ProductionOrderRecGbl."Description 2")
                     {
                     }
                     column(ProductionQuantity; ProductionQuantity)
@@ -356,6 +358,7 @@ report 52109 "HMP Routing Sheet"
                     OutputNo := 1;
 
                     if ProdOrderLineRecGbl."Prod. Order No." <> '' then begin
+                        ProductionOrderRecGbl.get(ProdOrderLineRecGbl.Status, ProdOrderLineRecGbl."Prod. Order No.");
                         BarcodeFontProvider := Enum::"Barcode Font Provider"::IDAutomation1D;
                         BarcodeSymbology := Enum::"Barcode Symbology"::"Code39";
                         BarcodeFontProvider.ValidateInput(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
@@ -399,10 +402,17 @@ report 52109 "HMP Routing Sheet"
                 group(Options)
                 {
                     Caption = 'Options';
+                    field(RPONoVarGbl; RPONoVarGbl)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'RPO No.';
+                        Editable = false;
+                    }
                     field(ProductionQuantity; ProductionQuantity)
                     {
                         ApplicationArea = all;
                         Caption = 'Production Quantity';
+                        Editable = false;
                         DecimalPlaces = 0 : 5;
                         MinValue = 0;
                         ToolTip = 'Specifies the quantity of items to manufacture for which you want the program to calculate the total time of the routing.';
@@ -441,10 +451,16 @@ report 52109 "HMP Routing Sheet"
                 }
             }
         }
-
         actions
         {
         }
+        trigger OnOpenPage()
+        begin
+            if ProdOrderLineRecGbl."Prod. Order No." <> '' then begin
+                ProductionQuantity := ProdOrderLineRecGbl."Remaining Quantity";
+                RPONoVarGbl := ProdOrderLineRecGbl."Prod. Order No.";
+            end;
+        end;
     }
 
     labels
@@ -455,18 +471,6 @@ report 52109 "HMP Routing Sheet"
     begin
         ProductionQuantity := 1;
         PrintComment := true;
-
-        if ProdOrderLineRecGbl."Prod. Order No." <> '' then begin
-            ProductionOrderRecGbl.get(ProdOrderLineRecGbl.Status, ProdOrderLineRecGbl."Prod. Order No.");
-            ReservationEntryRecGbl.Reset();
-            ReservationEntryRecGbl.SetRange("Source Type", Database::"Prod. Order Line");
-            ReservationEntryRecGbl.SetRange("Source ID", ProdOrderLineRecGbl."Prod. Order No.");
-            ReservationEntryRecGbl.SetRange(Positive, true);
-            if ReservationEntryRecGbl.FindFirst() then
-                if ReservationEntry2RecGbl.Get(ReservationEntryRecGbl."Entry No.") then
-                    if SalesHeaderRecGbl.get(SalesHeaderRecGbl."Document Type"::Order, ReservationEntry2RecGbl."Source ID") then;
-            ProductionQuantity := ProdOrderLineRecGbl."Remaining Quantity";
-        end;
     end;
 
     var
@@ -497,6 +501,7 @@ report 52109 "HMP Routing Sheet"
         ProdDesc: Text;
         ProdDesc2: Text;
         ProductionOrderRecGbl: Record "Production Order";
+        RPONoVarGbl: Text;
 
 
         Text000: Label 'Copy number:';
@@ -512,6 +517,7 @@ report 52109 "HMP Routing Sheet"
         ProductionOrderCaptionLbl: Label 'Production Order #:';
         SalesOrderCaptionLbl: Label 'Sales Order #:';
         CustomerCaptionLbl: Label 'Customer:';
+
 
     procedure SetProductionOrder(ProductionOrderLine: Record "Prod. Order Line")
     begin

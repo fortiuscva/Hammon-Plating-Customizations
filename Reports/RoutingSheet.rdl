@@ -114,7 +114,7 @@
                           <ZIndex>384</ZIndex>
                           <Style>
                             <Border />
-                            <VerticalAlign>Bottom</VerticalAlign>
+                            <VerticalAlign>Top</VerticalAlign>
                             <PaddingRight>5pt</PaddingRight>
                           </Style>
                         </Textbox>
@@ -123,12 +123,13 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="ItemDesc">
+                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Desc_Item.Value</Value>
+                                  <Value>=Fields!Desc_Item.Value+System.Environment.NewLine +Fields!Desc2_Item.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -142,7 +143,7 @@
                           <ZIndex>383</ZIndex>
                           <Style>
                             <Border />
-                            <VerticalAlign>Bottom</VerticalAlign>
+                            <VerticalAlign>Top</VerticalAlign>
                             <PaddingLeft>5pt</PaddingLeft>
                             <PaddingRight>5pt</PaddingRight>
                           </Style>
@@ -177,7 +178,7 @@
                           <ZIndex>382</ZIndex>
                           <Style>
                             <Border />
-                            <VerticalAlign>Bottom</VerticalAlign>
+                            <VerticalAlign>Top</VerticalAlign>
                             <PaddingLeft>5pt</PaddingLeft>
                             <PaddingRight>5pt</PaddingRight>
                           </Style>
@@ -210,7 +211,7 @@
                           <ZIndex>381</ZIndex>
                           <Style>
                             <Border />
-                            <VerticalAlign>Bottom</VerticalAlign>
+                            <VerticalAlign>Top</VerticalAlign>
                             <PaddingLeft>5pt</PaddingLeft>
                             <PaddingRight>5pt</PaddingRight>
                           </Style>
@@ -3965,7 +3966,7 @@
             <Style />
           </Tablix>
         </ReportItems>
-        <Height>6.19647cm</Height>
+        <Height>6.79647cm</Height>
         <Style />
       </Body>
       <Width>18.13108cm</Width>
@@ -4474,6 +4475,9 @@ End Function
         </Field>
         <Field Name="Desc_Item">
           <DataField>Desc_Item</DataField>
+        </Field>
+        <Field Name="Desc2_Item">
+          <DataField>Desc2_Item</DataField>
         </Field>
         <Field Name="ProductionQuantity">
           <DataField>ProductionQuantity</DataField>
