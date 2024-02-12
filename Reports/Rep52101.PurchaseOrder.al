@@ -310,6 +310,8 @@ report 52101 "HMP Purchase Order"
                         { }
                         column(Planned_Receipt_Date; "Planned Receipt Date")
                         { }
+                        column(Type; Type)
+                        { }
                         trigger OnAfterGetRecord()
                         begin
                             OnLineNumber := OnLineNumber + 1;
