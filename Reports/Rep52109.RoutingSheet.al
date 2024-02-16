@@ -29,6 +29,16 @@ report 52109 "HMP Routing Sheet"
             column(PrintQualityMeasures; PrintQualityMeasures)
             {
             }
+            column(BarcodeString; BarcodeString)
+            {
+            }
+            column(NoProdOrderRecGbl; ProdOrderLineRecGbl."Prod. Order No.")
+            {
+            }
+            column(SalesOrderNo; SalesHeaderRecGbl."No.")
+            { }
+            column(CustomerNo; SalesHeaderRecGbl."Sell-to Customer Name")
+            { }
             dataitem(Counter1; "Integer")
             {
                 DataItemTableView = SORTING(Number);
@@ -51,7 +61,11 @@ report 52109 "HMP Routing Sheet"
                     column(No01_Item; Item."No.")
                     {
                     }
-                    column(Desc_Item; Item.Description)
+                    //column(Desc_Item; Item.Description)
+                    column(Desc_Item; ProductionOrderRecGbl.Description)
+                    {
+                    }
+                    column(Desc2_Item; ProductionOrderRecGbl."Description 2")
                     {
                     }
                     column(ProductionQuantity; ProductionQuantity)
@@ -84,6 +98,18 @@ report 52109 "HMP Routing Sheet"
                     }
                     column(DescriptionCaption; DescriptionCaptionLbl)
                     {
+                    }
+                    column(ProductionOrderCaption; ProductionOrderCaptionLbl)
+                    {
+
+                    }
+                    column(SalesOrderCaption; SalesOrderCaptionLbl)
+                    {
+
+                    }
+                    column(CustomerCaption; CustomerCaptionLbl)
+                    {
+
                     }
                     dataitem("Item Attribute Value Mapping"; "Item Attribute Value Mapping")
                     {
@@ -319,6 +345,10 @@ report 52109 "HMP Routing Sheet"
                 end;
 
                 trigger OnPreDataItem()
+                var
+
+                    BarcodeSymbology: Enum "Barcode Symbology";
+                    BarcodeFontProvider: Interface "Barcode Font Provider";
                 begin
                     if NumberOfCopies = 0 then
                         LoopNo := 1
@@ -326,6 +356,23 @@ report 52109 "HMP Routing Sheet"
                         LoopNo := 1 + NumberOfCopies;
                     CopyNo := 0;
                     OutputNo := 1;
+
+                    if ProdOrderLineRecGbl."Prod. Order No." <> '' then begin
+                        ProductionOrderRecGbl.get(ProdOrderLineRecGbl.Status, ProdOrderLineRecGbl."Prod. Order No.");
+                        BarcodeFontProvider := Enum::"Barcode Font Provider"::IDAutomation1D;
+                        BarcodeSymbology := Enum::"Barcode Symbology"::"Code39";
+                        BarcodeFontProvider.ValidateInput(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
+                        BarcodeString := BarcodeFontProvider.EncodeFont(ProdOrderLineRecGbl."Prod. Order No.", BarcodeSymbology);
+
+                        ReservationEntryRecGbl.Reset();
+                        ReservationEntryRecGbl.SetRange("Source Type", Database::"Prod. Order Line");
+                        ReservationEntryRecGbl.SetRange("Source ID", ProdOrderLineRecGbl."Prod. Order No.");
+                        ReservationEntryRecGbl.SetRange(Positive, true);
+                        if ReservationEntryRecGbl.FindFirst() then
+                            if ReservationEntry2RecGbl.Get(ReservationEntryRecGbl."Entry No.") then
+                                if SalesHeaderRecGbl.get(SalesHeaderRecGbl."Document Type"::Order, ReservationEntry2RecGbl."Source ID") then;
+
+                    end;
                 end;
             }
             trigger OnAfterGetRecord()
@@ -341,6 +388,7 @@ report 52109 "HMP Routing Sheet"
                 else
                     ActiveVersionText := '';
             end;
+
         }
     }
 
@@ -354,10 +402,17 @@ report 52109 "HMP Routing Sheet"
                 group(Options)
                 {
                     Caption = 'Options';
+                    field(RPONoVarGbl; RPONoVarGbl)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'RPO No.';
+                        Editable = false;
+                    }
                     field(ProductionQuantity; ProductionQuantity)
                     {
                         ApplicationArea = all;
                         Caption = 'Production Quantity';
+                        Editable = false;
                         DecimalPlaces = 0 : 5;
                         MinValue = 0;
                         ToolTip = 'Specifies the quantity of items to manufacture for which you want the program to calculate the total time of the routing.';
@@ -396,10 +451,16 @@ report 52109 "HMP Routing Sheet"
                 }
             }
         }
-
         actions
         {
         }
+        trigger OnOpenPage()
+        begin
+            if ProdOrderLineRecGbl."Prod. Order No." <> '' then begin
+                ProductionQuantity := ProdOrderLineRecGbl."Remaining Quantity";
+                RPONoVarGbl := ProdOrderLineRecGbl."Prod. Order No.";
+            end;
+        end;
     }
 
     labels
@@ -409,6 +470,7 @@ report 52109 "HMP Routing Sheet"
     trigger OnInitReport()
     begin
         ProductionQuantity := 1;
+        PrintComment := true;
     end;
 
     var
@@ -418,6 +480,11 @@ report 52109 "HMP Routing Sheet"
         VersionMgt: Codeunit VersionManagement;
         CalendarMgt: Codeunit "Shop Calendar Management";
         UOMMgt: Codeunit "Unit of Measure Management";
+        ProdOrderLineRecGbl: Record "Prod. Order Line";
+        ReservationEntryRecGbl: Record "Reservation Entry";
+        ReservationEntry2RecGbl: Record "Reservation Entry";
+        SalesHeaderRecGbl: Record "Sales Header";
+        BarcodeString: Text;
         NumberOfCopies: Integer;
         CopyNo: Integer;
         CopyText: Text[30];
@@ -431,6 +498,11 @@ report 52109 "HMP Routing Sheet"
         TotalTime: Decimal;
         ActiveVersionCode: Code[20];
         RoutingComment: Text;
+        ProdDesc: Text;
+        ProdDesc2: Text;
+        ProductionOrderRecGbl: Record "Production Order";
+        RPONoVarGbl: Text;
+
 
         Text000: Label 'Copy number:';
         Text001: Label 'Active Version';
@@ -442,5 +514,14 @@ report 52109 "HMP Routing Sheet"
         TotalTimeCaptionLbl: Label 'Total Time';
         RtngLnRunTimeUOMCodeCptnLbl: Label 'Time Unit';
         DescriptionCaptionLbl: label 'Description';
+        ProductionOrderCaptionLbl: Label 'Production Order #:';
+        SalesOrderCaptionLbl: Label 'Sales Order #:';
+        CustomerCaptionLbl: Label 'Customer:';
+
+
+    procedure SetProductionOrder(ProductionOrderLine: Record "Prod. Order Line")
+    begin
+        ProdOrderLineRecGbl := ProductionOrderLine;
+    end;
 }
 
