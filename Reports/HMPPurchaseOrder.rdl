@@ -1363,9 +1363,6 @@ First(Fields!LineAmtTaxAmtInvDiscountAmtFormat.Value)</Value>
                       <KeepTogether>true</KeepTogether>
                     </TablixMember>
                     <TablixMember>
-                      <Visibility>
-                        <Hidden>=IIF(Fields!No_PurchaseLine.Value = "",false,true)</Hidden>
-                      </Visibility>
                       <KeepWithGroup>Before</KeepWithGroup>
                       <KeepTogether>true</KeepTogether>
                     </TablixMember>
